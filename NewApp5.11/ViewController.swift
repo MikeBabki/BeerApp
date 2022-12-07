@@ -59,8 +59,8 @@ func setupText() {
     logotipImage.layer.cornerRadius = 60
     
     alredyAcardButton.setTitle("I already have a card*", for: .normal)
-    alredyAcardButton.backgroundColor = .systemGray5
     alredyAcardButton.layer.cornerRadius = 15
+    alredyAcardButton.setTitleColor(.white, for: .normal)
     
 //    haveAcardLabel.font = .systemFont(ofSize: 15, weight: .medium)
 //    haveAcardLabel.text = "I already have a card*"

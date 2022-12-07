@@ -11,8 +11,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
    
     // MARK: - Outlets
     
-    @IBOutlet weak var rightLabel: UILabel!
-    @IBOutlet weak var createNewLabel: UILabel!
+  
+    @IBOutlet weak var createANewButton: UIButton!
+    
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var forgottenButton: UIButton!
@@ -33,7 +34,8 @@ extension SecondViewController {
     
     func setupText() {
         
-        createNewLabel.text = "CREATE A NEW ACCOUNT"
+        createANewButton.setTitle("CREATE A NEW ACCOUNT", for: .normal)
+        createANewButton.setTitleColor(.white, for: .normal)
         
         forgottenButton.setTitle("Forgotten password?", for: .normal)
         
@@ -45,7 +47,7 @@ extension SecondViewController {
         emaillabel.text = "E-mail adress"
         emaillabel.shadowColor = .gray
         
-        rightLabel.text = "LOGIN"
+//        rightLabel.text = "LOGIN"
         
         loginButton.layer.cornerRadius = 20
         loginButton.backgroundColor = .systemPink
