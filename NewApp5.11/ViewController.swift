@@ -9,7 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var haveAcardLabel: UILabel!
+    // MARK: - Outlets
+
+    @IBOutlet weak var logotipImage: UIImageView!
+    @IBOutlet weak var alredyAcardButton: UIButton!
     @IBOutlet weak var buttonTapped: UIButton!
     @IBOutlet weak var acceptLabel: UILabel!
     @IBOutlet weak var receiveLabel: UILabel!
@@ -17,20 +20,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var fundLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        superPuper()
         setupText()
         // Do any additional setup after loading the view.
     }
-
+    // MARK: - Actions
+    
+    @IBAction func alredyACardTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+            
+            let backItem = UIBarButtonItem(title: "Назад", style: .bordered, target: nil, action: nil)
+            navigationItem.backBarButtonItem = backItem
+            navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func buttonAction(_ sender: Any) {
         
-    let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
-        
-        navigationController?.pushViewController(vc, animated: true)
         
     }
     
 }
+// MARK: - Extension for ViewController
 
 extension ViewController {
     
@@ -46,10 +56,33 @@ func setupText() {
     buttonTapped.layer.cornerRadius = 20
     buttonTapped.setTitle("GET YOUR CARD NOW!", for: .normal)
     
-    haveAcardLabel.font = .systemFont(ofSize: 15, weight: .medium)
-    haveAcardLabel.text = "I already have a card*"
+    logotipImage.layer.cornerRadius = 60
+    
+    alredyAcardButton.setTitle("I already have a card*", for: .normal)
+    alredyAcardButton.backgroundColor = .systemGray5
+    alredyAcardButton.layer.cornerRadius = 15
+    
+//    haveAcardLabel.font = .systemFont(ofSize: 15, weight: .medium)
+//    haveAcardLabel.text = "I already have a card*"
     }
     
 }
 
-
+extension ViewController {
+ 
+    func superPuper() {
+    if UIScreen.main.bounds.size.width <= 400 {
+        acceptLabel.font = .systemFont(ofSize: 15, weight: .medium);
+        receiveLabel.font = .systemFont(ofSize: 15, weight: .medium);
+        fundLabel.font = .systemFont(ofSize: 15, weight: .medium)
+        welcomeLabel.font = .systemFont(ofSize: 10, weight: .light)
+    } else if UIScreen.main.bounds.size.width >= 400 {
+        acceptLabel.font = .systemFont(ofSize: 20, weight: .medium);
+        receiveLabel.font = .systemFont(ofSize: 20, weight: .medium);
+        fundLabel.font = .systemFont(ofSize: 20, weight: .medium)
+        welcomeLabel.font = .systemFont(ofSize: 16, weight: .medium)
+    }else {
+        print("Opa")
+    }
+}
+}

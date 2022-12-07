@@ -8,7 +8,9 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
-
+   
+    // MARK: - Outlets
+    
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var createNewLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -26,6 +28,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
     }
 }
+// MARK: - Extension for SecondViewController
 extension SecondViewController {
     
     func setupText() {
@@ -35,9 +38,12 @@ extension SecondViewController {
         forgottenButton.setTitle("Forgotten password?", for: .normal)
         
         loginButton.setTitle("LOGIN", for: .normal)
+        loginButton.setTitleColor(.black, for: .normal)
         
         passwordLabel.text = "Password"
+        passwordLabel.shadowColor = .gray
         emaillabel.text = "E-mail adress"
+        emaillabel.shadowColor = .gray
         
         rightLabel.text = "LOGIN"
         
