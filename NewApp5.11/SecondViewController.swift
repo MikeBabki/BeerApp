@@ -152,9 +152,9 @@ extension SecondViewController {
 
     func buttonIsEnabled() {
 
-        if wrongPasswordLabel.isHidden && wrongLoginLabel.isHidden {
+        if wrongPasswordLabel.isHidden && wrongLoginLabel.isHidden && passwordTextField.text != "" && emailTextField.text != "" {
             loginButton.isEnabled = true
-            print("Helo")
+            print("Helsso")
         } else {
             loginButton.isEnabled = false
         }
