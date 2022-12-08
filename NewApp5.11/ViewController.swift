@@ -71,18 +71,30 @@ func setupText() {
 extension ViewController {
  
     func superPuper() {
-    if UIScreen.main.bounds.size.width <= 400 {
+    if UIScreen.main.bounds.size.width < 375 {
         acceptLabel.font = .systemFont(ofSize: 15, weight: .medium);
         receiveLabel.font = .systemFont(ofSize: 15, weight: .medium);
         fundLabel.font = .systemFont(ofSize: 15, weight: .medium)
         welcomeLabel.font = .systemFont(ofSize: 10, weight: .light)
-    } else if UIScreen.main.bounds.size.width >= 400 {
+    } else {
         acceptLabel.font = .systemFont(ofSize: 20, weight: .medium);
         receiveLabel.font = .systemFont(ofSize: 20, weight: .medium);
         fundLabel.font = .systemFont(ofSize: 20, weight: .medium)
         welcomeLabel.font = .systemFont(ofSize: 16, weight: .medium)
-    }else {
-        print("Opa")
     }
 }
 }
+//func superPuper() {
+//if UIScreen.main.bounds.size.width < 375 {
+//    acceptLabel.font = .systemFont(ofSize: 15, weight: .medium);
+//    receiveLabel.font = .systemFont(ofSize: 15, weight: .medium);
+//    fundLabel.font = .systemFont(ofSize: 15, weight: .medium)
+//    welcomeLabel.font = .systemFont(ofSize: 10, weight: .light)
+//} else if UIScreen.main.bounds.size.width > 375 {
+//    acceptLabel.font = .systemFont(ofSize: 20, weight: .medium);
+//    receiveLabel.font = .systemFont(ofSize: 20, weight: .medium);
+//    fundLabel.font = .systemFont(ofSize: 20, weight: .medium)
+//    welcomeLabel.font = .systemFont(ofSize: 16, weight: .medium)
+//}else {
+//    print("Opa")
+

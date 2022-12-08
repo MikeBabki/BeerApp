@@ -45,6 +45,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="loginButtoAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="w8u-Bv-IVZ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3a0-H6-6o2">
                                 <rect key="frame" x="40" y="224" width="334" height="34"/>
@@ -64,6 +67,19 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRM-HW-nHX">
+                                <rect key="frame" x="40" y="266" width="28.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.91764706370000004" green="0.270588249" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-wv-uOx">
+                                <rect key="frame" x="40" y="389" width="28.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.91764706370000004" green="0.270588249" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,11 +90,13 @@
                             <constraint firstItem="3a0-H6-6o2" firstAttribute="top" secondItem="BSK-5P-ta5" secondAttribute="bottom" constant="10" id="HdT-Gp-3UX"/>
                             <constraint firstItem="3a0-H6-6o2" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="I9H-Qw-47V"/>
                             <constraint firstAttribute="bottom" secondItem="UTb-6C-5wV" secondAttribute="bottom" id="K9Q-pX-yos"/>
+                            <constraint firstItem="oRM-HW-nHX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="LP5-KW-5FV"/>
                             <constraint firstItem="i5d-jg-8QZ" firstAttribute="leading" secondItem="p3h-t7-Ijz" secondAttribute="trailing" constant="10" id="PP7-6n-Sh8"/>
                             <constraint firstItem="plI-mL-oL0" firstAttribute="top" secondItem="3a0-H6-6o2" secondAttribute="bottom" constant="20" id="TBr-OR-Cg2"/>
                             <constraint firstItem="3a0-H6-6o2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Tob-B1-WhF"/>
                             <constraint firstItem="p3h-t7-Ijz" firstAttribute="width" secondItem="KSL-B9-WsI" secondAttribute="width" multiplier="0.449102" id="VVw-3E-Z1H"/>
                             <constraint firstItem="UTb-6C-5wV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cPZ-rR-w9Y"/>
+                            <constraint firstItem="oRM-HW-nHX" firstAttribute="top" secondItem="3a0-H6-6o2" secondAttribute="bottom" constant="4" id="dEw-vV-2dG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UTb-6C-5wV" secondAttribute="trailing" id="ddP-Rf-VE3"/>
                             <constraint firstItem="p3h-t7-Ijz" firstAttribute="top" secondItem="KSL-B9-WsI" secondAttribute="bottom" constant="45" id="eMQ-L6-6hz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KSL-B9-WsI" secondAttribute="trailing" constant="40" id="f7a-wo-4n8"/>
@@ -87,6 +105,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WHt-FE-rGg" secondAttribute="bottom" constant="40" id="k6S-81-5Ic"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3a0-H6-6o2" secondAttribute="trailing" constant="40" id="kcd-VD-R47"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i5d-jg-8QZ" secondAttribute="trailing" constant="40" id="lRL-GC-B6g"/>
+                            <constraint firstItem="PHW-wv-uOx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="n3l-Ym-4AT"/>
+                            <constraint firstItem="PHW-wv-uOx" firstAttribute="top" secondItem="KSL-B9-WsI" secondAttribute="bottom" constant="4" id="om4-8V-DYd"/>
                             <constraint firstItem="BSK-5P-ta5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="reT-hp-26g"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="plI-mL-oL0" secondAttribute="trailing" constant="174" id="uvg-Fn-SSK"/>
                             <constraint firstItem="3a0-H6-6o2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="vWK-qN-IvD"/>
@@ -108,6 +128,8 @@
                         <outlet property="loginLabel" destination="UTb-6C-5wV" id="4wz-Dz-O28"/>
                         <outlet property="passwordLabel" destination="plI-mL-oL0" id="wEq-8g-qNh"/>
                         <outlet property="passwordTextField" destination="KSL-B9-WsI" id="UKF-xc-LhD"/>
+                        <outlet property="wrongLoginLabel" destination="oRM-HW-nHX" id="eO1-Rl-Glh"/>
+                        <outlet property="wrongPasswordLabel" destination="PHW-wv-uOx" id="xdS-AG-hpy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,6 +139,9 @@
     </scenes>
     <resources>
         <image name="16431" width="3840" height="2400"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
