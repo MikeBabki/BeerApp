@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         superPuper()
         setupText()
-        setupUI() 
+        setupUI()
         // Do any additional setup after loading the view.
     }
     // MARK: - Actions
@@ -52,10 +52,7 @@ func setupText() {
     receiveLabel.text = "Receive discounts whenever you shop"
     fundLabel.text = "Fund local community project"
     
-    
     buttonTapped.setTitle("GET YOUR CARD NOW!", for: .normal)
-    
-   
     
     alredyAcardButton.setTitle("I already have a card*", for: .normal)
     }
@@ -94,17 +91,3 @@ extension ViewController {
     }
 }
 }
-//func superPuper() {
-//if UIScreen.main.bounds.size.width < 375 {
-//    acceptLabel.font = .systemFont(ofSize: 15, weight: .medium);
-//    receiveLabel.font = .systemFont(ofSize: 15, weight: .medium);
-//    fundLabel.font = .systemFont(ofSize: 15, weight: .medium)
-//    welcomeLabel.font = .systemFont(ofSize: 10, weight: .light)
-//} else if UIScreen.main.bounds.size.width > 375 {
-//    acceptLabel.font = .systemFont(ofSize: 20, weight: .medium);
-//    receiveLabel.font = .systemFont(ofSize: 20, weight: .medium);
-//    fundLabel.font = .systemFont(ofSize: 20, weight: .medium)
-//    welcomeLabel.font = .systemFont(ofSize: 16, weight: .medium)
-//}else {
-//    print("Opa")
-

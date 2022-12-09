@@ -100,8 +100,6 @@ extension SecondViewController {
         emaillabel.text = "E-mail adress"
         emaillabel.shadowColor = .gray
         
-//        rightLabel.text = "LOGIN"
-        
         loginButton.layer.cornerRadius = 20
         loginButton.backgroundColor = .systemPink
         
