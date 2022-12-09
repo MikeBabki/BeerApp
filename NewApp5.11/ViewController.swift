@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         superPuper()
         setupText()
+        setupUI() 
         // Do any additional setup after loading the view.
     }
     // MARK: - Actions
@@ -46,28 +47,37 @@ extension ViewController {
     
 func setupText() {
     welcomeLabel.text = "Welcome"
-    welcomeLabel.font = .systemFont(ofSize: 17, weight: .medium)
     
     acceptLabel.text = "Accepted at 1000+ stores"
     receiveLabel.text = "Receive discounts whenever you shop"
     fundLabel.text = "Fund local community project"
     
-    buttonTapped.backgroundColor = .white
-    buttonTapped.layer.cornerRadius = 20
+    
     buttonTapped.setTitle("GET YOUR CARD NOW!", for: .normal)
     
-    logotipImage.layer.cornerRadius = 60
+   
     
     alredyAcardButton.setTitle("I already have a card*", for: .normal)
-    alredyAcardButton.layer.cornerRadius = 15
-    alredyAcardButton.setTitleColor(.white, for: .normal)
-    
-//    haveAcardLabel.font = .systemFont(ofSize: 15, weight: .medium)
-//    haveAcardLabel.text = "I already have a card*"
     }
     
 }
+// MARK: - Extention SetupUI
+extension ViewController {
+    
+func setupUI() {
 
+    welcomeLabel.font = .systemFont(ofSize: 17, weight: .medium)
+    
+    buttonTapped.backgroundColor = .white
+    buttonTapped.layer.cornerRadius = 20
+    
+    logotipImage.layer.cornerRadius = 60
+    
+    alredyAcardButton.layer.cornerRadius = 15
+    alredyAcardButton.setTitleColor(.white, for: .normal)
+}
+}
+// MARK: - Extention for other screen size
 extension ViewController {
  
     func superPuper() {

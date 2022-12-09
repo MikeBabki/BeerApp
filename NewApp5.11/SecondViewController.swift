@@ -24,12 +24,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginLabel: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         
-        
-        
-        wrongLoginLabel.isHidden = true
-        wrongPasswordLabel.isHidden = true
-
         passwordTextField.isSecureTextEntry = true
         
         configureShowTextButton()
@@ -38,8 +34,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         emailTextField.addTarget(self, action: #selector(haveDogInAdress(_:)), for: .editingChanged)
         
         setupText()
-        passwordTextField.delegate = self
-        emailTextField.delegate = self
+        delegateSetup()
+        
         
     }
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -121,31 +117,26 @@ extension SecondViewController {
     
 }
 
-extension ViewController: UITextFieldDelegate {
+// MARK: - Extension for textField delegate
     
+extension SecondViewController {
+    
+    func delegateSetup() {
+        
+    passwordTextField.delegate = self
+    emailTextField.delegate = self
+}
+}
+// MARK: - Extension for hidden label setupUI
+    
+extension SecondViewController {
+    
+    func setupUI() {
+    wrongLoginLabel.isHidden = true
+    wrongPasswordLabel.isHidden = true
     
     }
-    
-//    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
-//        {
-//            textField.resignFirstResponder()
-//            return true;
-//        }
-    
-    
-
-
-// MARK: - Extension for two textfield (validate, is not a nil)
-//extension SecondViewController {
-//
-//    func textFieldNotNil(textField: UITextField) {
-//        if passwordTextField.text!.isEmpty || emailTextField.text!.isEmpty {
-//            //Disable button
-//        } else {
-//            return
-//        }
-//    }
-//}
+}
 
 // MARK: - Extension for PasswordTextField (hide password textfield)
 extension SecondViewController {
