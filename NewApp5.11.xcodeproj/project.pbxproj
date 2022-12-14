@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */; };
+		DDCEDDC7294355CA004F4D43 /* PasswordTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */; };
+		DDCEDDCD294377AB004F4D43 /* EmailTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */; };
+		DDCEDDCF294377B8004F4D43 /* EmailTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */; };
 		DDE5BE0D293E70C50069B5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE5BE0C293E70C50069B5DE /* AppDelegate.swift */; };
 		DDE5BE0F293E70C50069B5DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE5BE0E293E70C50069B5DE /* SceneDelegate.swift */; };
 		DDE5BE11293E70C50069B5DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE5BE10293E70C50069B5DE /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFiledView.swift; sourceTree = "<group>"; };
+		DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTextFieldView.xib; sourceTree = "<group>"; };
+		DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldView.swift; sourceTree = "<group>"; };
+		DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailTextFieldView.xib; sourceTree = "<group>"; };
 		DDE5BE09293E70C50069B5DE /* NewApp5.11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp5.11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE5BE0C293E70C50069B5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE5BE0E293E70C50069B5DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDCEDDC8294355CF004F4D43 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DDCEDDCB29437785004F4D43 /* Textfield and underLabel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DDCEDDC9294355E2004F4D43 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				DDE5BE15293E70C70069B5DE /* Assets.xcassets */,
+				DDE5BE1A293E70C70069B5DE /* Info.plist */,
+				DDE5BE0C293E70C50069B5DE /* AppDelegate.swift */,
+				DDE5BE0E293E70C50069B5DE /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		DDCEDDCA29435604004F4D43 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDE5BE20293E759E0069B5DE /* SecondViewController.storyboard */,
+				DDE5BE12293E70C50069B5DE /* Main.storyboard */,
+				DDE5BE17293E70C70069B5DE /* LaunchScreen.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DDCEDDCB29437785004F4D43 /* Textfield and underLabel */ = {
+			isa = PBXGroup;
+			children = (
+				DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */,
+				DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */,
+				DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */,
+				DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */,
+			);
+			path = "Textfield and underLabel";
+			sourceTree = "<group>";
+		};
 		DDE5BE00293E70C50069B5DE = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +108,11 @@
 		DDE5BE0B293E70C50069B5DE /* NewApp5.11 */ = {
 			isa = PBXGroup;
 			children = (
-				DDE5BE0C293E70C50069B5DE /* AppDelegate.swift */,
-				DDE5BE0E293E70C50069B5DE /* SceneDelegate.swift */,
+				DDCEDDC9294355E2004F4D43 /* System */,
 				DDE5BE10293E70C50069B5DE /* ViewController.swift */,
 				DDE5BE22293E75A80069B5DE /* SecondViewController.swift */,
-				DDE5BE20293E759E0069B5DE /* SecondViewController.storyboard */,
-				DDE5BE12293E70C50069B5DE /* Main.storyboard */,
-				DDE5BE17293E70C70069B5DE /* LaunchScreen.storyboard */,
-				DDE5BE15293E70C70069B5DE /* Assets.xcassets */,
-				DDE5BE1A293E70C70069B5DE /* Info.plist */,
+				DDCEDDC8294355CF004F4D43 /* Base */,
+				DDCEDDCA29435604004F4D43 /* ViewControllers */,
 			);
 			path = NewApp5.11;
 			sourceTree = "<group>";
@@ -132,9 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE5BE19293E70C70069B5DE /* LaunchScreen.storyboard in Resources */,
+				DDCEDDCF294377B8004F4D43 /* EmailTextFieldView.xib in Resources */,
 				DDE5BE21293E759E0069B5DE /* SecondViewController.storyboard in Resources */,
 				DDE5BE16293E70C70069B5DE /* Assets.xcassets in Resources */,
 				DDE5BE14293E70C50069B5DE /* Main.storyboard in Resources */,
+				DDCEDDC7294355CA004F4D43 /* PasswordTextFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +192,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE5BE23293E75A80069B5DE /* SecondViewController.swift in Sources */,
+				DDCEDDCD294377AB004F4D43 /* EmailTextFieldView.swift in Sources */,
 				DDE5BE11293E70C50069B5DE /* ViewController.swift in Sources */,
+				DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */,
 				DDE5BE0D293E70C50069B5DE /* AppDelegate.swift in Sources */,
 				DDE5BE0F293E70C50069B5DE /* SceneDelegate.swift in Sources */,
 			);
