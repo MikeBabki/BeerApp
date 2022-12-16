@@ -8,7 +8,7 @@
 import UIKit
 protocol EmailProtocol: AnyObject {
 
-    func takeString(textField: UITextField)
+    func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel)
     
 }
 
@@ -18,7 +18,7 @@ class EmailTextFieldView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextfield: UITextField!
-     @IBOutlet weak var wrongEmailLabel: UILabel!
+    @IBOutlet weak var wrongEmailLabel: UILabel!
    
     
     var tfDelegate: EmailProtocol?
@@ -30,6 +30,7 @@ class EmailTextFieldView: UIView {
                 contentView.frame = bounds
                 contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         setupText()
+        contentView.backgroundColor = .clear
         wrongEmailLabel.text = "sosa"
 //        setupUI()
         emailTextfield.addTarget(self, action: #selector(haveDogInAdress(_:)), for: .editingChanged)
@@ -61,7 +62,7 @@ class EmailTextFieldView: UIView {
 }
     @objc func textFieldDidChange(_ textField: UITextField) {
        
-        tfDelegate?.takeString(textField: textField)
+        tfDelegate?.takeString(textField: textField, emailLabel: emailLabel, wrongEmailLabel: wrongEmailLabel)
     }
 }
 

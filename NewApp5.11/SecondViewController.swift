@@ -22,11 +22,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         passwordView.tfDelegate = self
         emailView.tfDelegate = self
-        emailView.emailLabel.text = "Sosa"
+      
+        emailView.wrongEmailLabel.isHidden = true
+        
+        emailView.emailLabel.text = "Login"
         emailView.wrongEmailLabel.text = "Sasa"
         
         passwordView.wrongPasswordLabel.text = "Koka"
-        passwordView.passwordLabel.text = "Joki"
+        passwordView.passwordLabel.text = "Password"
 //        configureShowTextButton()
         setupText()
     }
@@ -62,17 +65,26 @@ extension SecondViewController {
     
 extension SecondViewController: PasswordTextFieldProtocol{
     func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
-        print(textField.text)
+        if textField.text!.count >= 6 {
+            errorLabel.isHidden = true
+        }else {
+        errorLabel.isHidden = false
+        errorLabel.text = "Поле должно содержать минимум 6 символов"
+        }
     }
     
     
 }
 extension SecondViewController: EmailProtocol {
-    func takeString(textField: UITextField) {
-        print(textField.text)
+    
+    func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel) {
+        if textField.text!.contains("@") {
+            wrongEmailLabel.isHidden = true
+        }else {
+            wrongEmailLabel.isHidden = false
+            wrongEmailLabel.text = "Поле должно содержать - @"
+        }
     }
-    
-    
 }
 // MARK: - Extension for hidden label setupUI
     
