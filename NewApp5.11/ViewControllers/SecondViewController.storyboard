@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-t7-Ijz">
-                                <rect key="frame" x="45" y="491" width="141" height="70"/>
+                                <rect key="frame" x="45" y="491" width="67" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p3h-t7-Ijz" secondAttribute="height" multiplier="141:70" id="T6z-PE-Ugg"/>
                                 </constraints>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-jg-8QZ">
-                                <rect key="frame" x="234" y="491" width="145" height="70"/>
+                                <rect key="frame" x="160" y="491" width="67" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="i5d-jg-8QZ" secondAttribute="height" multiplier="29:14" id="c8w-R8-589"/>
                                 </constraints>

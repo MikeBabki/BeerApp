@@ -44,8 +44,8 @@
                     <rect key="frame" x="0.0" y="42" width="334" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="344" id="lal-VF-amI"/>
-                        <constraint firstAttribute="width" secondItem="Vdc-6s-P8E" secondAttribute="height" multiplier="167:17" id="or0-0L-CoP"/>
-                        <constraint firstAttribute="height" constant="34" id="y84-OU-Qwz"/>
+                        <constraint firstAttribute="width" secondItem="Vdc-6s-P8E" secondAttribute="height" multiplier="167:45" constant="17" id="or0-0L-CoP"/>
+                        <constraint firstAttribute="height" constant="17" id="y84-OU-Qwz"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>

@@ -35,9 +35,11 @@ class PasswordTextFiledView: UIView {
             addSubview(contentView)
                     contentView.frame = bounds
                     contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            configureShowTextButton()
             setupText()
             setupUI()
             passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            configureShowTextButton()
             
         }
             
@@ -48,6 +50,7 @@ class PasswordTextFiledView: UIView {
             addSubview(contentView)
                     contentView.frame = bounds
                     contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            configureShowTextButton()
             setupUI()
             setupText()
             passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -60,18 +63,12 @@ class PasswordTextFiledView: UIView {
         tfDelegate?.takeString(textField: textField, mainLabel: passwordLabel, errorLabel: wrongPasswordLabel)
        
     }
-    @objc private func showTextButtonTapped(_ sender: UIButton) {
+    @objc func showTextButtonTapped(_ sender: UIButton) {
         sender.setImage((passwordTextField.isSecureTextEntry ? UIImage(systemName: "eye") : UIImage(systemName: "eye.slash.fill"))?.withRenderingMode(.alwaysTemplate), for: .normal)
             passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
         }
     @objc func textFieldChanging(_ textField: UITextField) {
        
-        if textField.text!.count >= 6 {
-            wrongPasswordLabel.isHidden = true
-        }else {
-        wrongPasswordLabel.isHidden = false
-        wrongPasswordLabel.text = "Поле должно содержать минимум 6 символов"
-        }
     }
     // MARK: - Private methods
     

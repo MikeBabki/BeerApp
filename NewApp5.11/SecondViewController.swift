@@ -24,7 +24,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         emailView.wrongEmailLabel.isHidden = true
-
+        
         initializeSetup()
         setupText()
     }
@@ -80,8 +80,6 @@ extension SecondViewController: PasswordTextFieldProtocol{
             errorLabel.text = "Поле должно содержать минимум 6 символов"
         }
     }
-    
-    
 }
 
 extension SecondViewController: EmailTextFieldDelegate {
@@ -95,6 +93,7 @@ extension SecondViewController: EmailTextFieldDelegate {
         }
     }
 }
+
 // MARK: - Extension for hidden label setupUI
     
 
