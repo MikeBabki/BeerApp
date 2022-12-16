@@ -32,18 +32,12 @@ class PasswordTextFiledView: UIView {
             super.init(frame: frame)
             
             commonInit()
-            configureShowTextButton()
-            setupUI()
-            setupText()
         }
             
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             
             commonInit()
-            configureShowTextButton()
-            setupUI()
-            setupText()
         }
 
     // MARK: - Private methods
@@ -54,6 +48,9 @@ class PasswordTextFiledView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        configureShowTextButton()
+        setupUI()
+        setupText()
     }
         
     // MARK: - Actions
