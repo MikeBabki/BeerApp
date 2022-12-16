@@ -78,12 +78,7 @@ class PasswordTextFiledView: UIView {
         passwordTextField.rightView = showTextButton
         passwordTextField.rightViewMode = .always
     
-//    passwordTextField.isSecureTextEntry = true
-//
-//    configureShowTextButton()
-//    passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-//
-//    emailTextField.addTarget(self, action: #selector(haveDogInAdress(_:)), for: .editingChanged)
+        
 }
 }
 extension PasswordTextFiledView {

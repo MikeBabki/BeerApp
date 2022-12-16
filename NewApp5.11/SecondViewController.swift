@@ -13,37 +13,45 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailView: EmailTextFieldView!
     @IBOutlet weak var passwordView: PasswordTextFiledView!
-    
     @IBOutlet weak var createANewButton: UIButton!
     @IBOutlet weak var forgottenButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginLabel: UIImageView!
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwordView.tfDelegate = self
-        emailView.tfDelegate = self
-      
+        
         emailView.wrongEmailLabel.isHidden = true
-        
-        emailView.emailLabel.text = "Login"
-        emailView.wrongEmailLabel.text = "Sasa"
-        
-        passwordView.wrongPasswordLabel.text = "Koka"
-        passwordView.passwordLabel.text = "Password"
-//        configureShowTextButton()
+
+        initializeSetup()
         setupText()
     }
     
     @IBAction func loginButtoAction(_ sender: Any) {
 //        buttonIsEnabled()
     }
+    
+    // MARK: - Private methods
+    
+    private func initializeSetup() {
+        passwordView.tfDelegate = self
+        emailView.tfDelegate = self
+    }
 }
 
 // MARK: - Extension for SecondViewController
+
 extension SecondViewController {
     
     func setupText() {
         
+        emailView.emailLabel.text = "Login"
+        emailView.wrongEmailLabel.text = "Sasa"
+        
+        passwordView.wrongPasswordLabel.text = "Koka"
+        passwordView.passwordLabel.text = "Password"
         
         createANewButton.setTitle("CREATE A NEW ACCOUNT", for: .normal)
         createANewButton.setTitleColor(.white, for: .normal)
@@ -67,20 +75,21 @@ extension SecondViewController: PasswordTextFieldProtocol{
     func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
         if textField.text!.count >= 6 {
             errorLabel.isHidden = true
-        }else {
-        errorLabel.isHidden = false
-        errorLabel.text = "Поле должно содержать минимум 6 символов"
+        } else {
+            errorLabel.isHidden = false
+            errorLabel.text = "Поле должно содержать минимум 6 символов"
         }
     }
     
     
 }
-extension SecondViewController: EmailProtocol {
+
+extension SecondViewController: EmailTextFieldDelegate {
     
     func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel) {
         if textField.text!.contains("@") {
             wrongEmailLabel.isHidden = true
-        }else {
+        } else {
             wrongEmailLabel.isHidden = false
             wrongEmailLabel.text = "Поле должно содержать - @"
         }

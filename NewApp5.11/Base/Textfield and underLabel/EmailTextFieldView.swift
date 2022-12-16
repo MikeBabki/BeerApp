@@ -6,65 +6,57 @@
 //
 
 import UIKit
-protocol EmailProtocol: AnyObject {
-
+protocol EmailTextFieldDelegate: AnyObject {
     func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel)
-    
 }
 
 class EmailTextFieldView: UIView {
     
-
+    // MARK: - Outlets
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var wrongEmailLabel: UILabel!
-   
     
-    var tfDelegate: EmailProtocol?
+    // MARK: - Public properties
+    
+    var tfDelegate: EmailTextFieldDelegate?
+    
+    // MARK: - Init
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
-        Bundle.main.loadNibNamed("EmailTextFieldView", owner: self, options: nil)
-        addSubview(contentView)
-                contentView.frame = bounds
-                contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        setupText()
-        contentView.backgroundColor = .clear
-        wrongEmailLabel.text = "sosa"
-//        setupUI()
-        emailTextfield.addTarget(self, action: #selector(haveDogInAdress(_:)), for: .editingChanged)
-        emailTextfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        commonInit()
     }
-        
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        commonInit()
+    }
+    
+    // MARK: - Private methods
+    
+    private func commonInit() {
         Bundle.main.loadNibNamed("EmailTextFieldView", owner: self, options: nil)
         addSubview(contentView)
-                contentView.frame = bounds
-                contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        setupUI()
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         setupText()
         wrongEmailLabel.text = "sosa"
-        emailTextfield.addTarget(self, action: #selector(haveDogInAdress(_:)), for: .editingChanged)
         emailTextfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
-    @objc func haveDogInAdress(_ textField: UITextField) {
-        
-        if textField.text!.contains("@") {
-            wrongEmailLabel.isHidden = true
-        }else {
-            wrongEmailLabel.isHidden = false
-            wrongEmailLabel.text = "Поле должно содержать - @"
-        }
-}
+    // MARK: - Actions
+    
     @objc func textFieldDidChange(_ textField: UITextField) {
-       
         tfDelegate?.takeString(textField: textField, emailLabel: emailLabel, wrongEmailLabel: wrongEmailLabel)
     }
 }
+
+// MARK: - Extension for layout
 
 extension EmailTextFieldView {
     
@@ -78,11 +70,3 @@ extension EmailTextFieldView {
     }
     
 }
-
-//extension EmailTextFieldView {
-//
-//    func setupUI() {
-//    wrongEmailLabel.isHidden = true
-//
-//    }
-//}

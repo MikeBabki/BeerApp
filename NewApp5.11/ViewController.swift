@@ -18,12 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var receiveLabel: UILabel!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var fundLabel: UILabel!
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        superPuper()
+        
         setupText()
         setupUI()
-        // Do any additional setup after loading the view.
     }
     // MARK: - Actions
     
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
             navigationItem.backBarButtonItem = backItem
             navigationController?.pushViewController(vc, animated: true)
     }
+    
     @IBAction func buttonAction(_ sender: Any) {
         
         
@@ -45,49 +48,46 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
-func setupText() {
-    welcomeLabel.text = "Welcome"
+    func setupText() {
+        welcomeLabel.text = "Welcome"
+        
+        acceptLabel.text = "Accepted at 1000+ stores"
+        receiveLabel.text = "Receive discounts whenever you shop"
+        fundLabel.text = "Fund local community project"
+        
+        buttonTapped.setTitle("GET YOUR CARD NOW!", for: .normal)
     
-    acceptLabel.text = "Accepted at 1000+ stores"
-    receiveLabel.text = "Receive discounts whenever you shop"
-    fundLabel.text = "Fund local community project"
-    
-    buttonTapped.setTitle("GET YOUR CARD NOW!", for: .normal)
-    
-    alredyAcardButton.setTitle("I already have a card*", for: .normal)
+        alredyAcardButton.setTitle("I already have a card*", for: .normal)
+        
+        if UIScreen.main.bounds.size.width < 375 {
+            acceptLabel.font = .systemFont(ofSize: 15, weight: .medium);
+            receiveLabel.font = .systemFont(ofSize: 15, weight: .medium);
+            fundLabel.font = .systemFont(ofSize: 15, weight: .medium)
+            welcomeLabel.font = .systemFont(ofSize: 10, weight: .light)
+        } else {
+            acceptLabel.font = .systemFont(ofSize: 20, weight: .medium);
+            receiveLabel.font = .systemFont(ofSize: 20, weight: .medium);
+            fundLabel.font = .systemFont(ofSize: 20, weight: .medium)
+            welcomeLabel.font = .systemFont(ofSize: 16, weight: .medium)
+        }
     }
     
 }
-// MARK: - Extention SetupUI
-extension ViewController {
-    
-func setupUI() {
 
-    welcomeLabel.font = .systemFont(ofSize: 17, weight: .medium)
-    
-    buttonTapped.backgroundColor = .white
-    buttonTapped.layer.cornerRadius = 20
-    
-    logotipImage.layer.cornerRadius = 60
-    
-    alredyAcardButton.layer.cornerRadius = 15
-    alredyAcardButton.setTitleColor(.white, for: .normal)
-}
-}
-// MARK: - Extention for other screen size
+// MARK: - Extention SetupUI
+
 extension ViewController {
- 
-    func superPuper() {
-    if UIScreen.main.bounds.size.width < 375 {
-        acceptLabel.font = .systemFont(ofSize: 15, weight: .medium);
-        receiveLabel.font = .systemFont(ofSize: 15, weight: .medium);
-        fundLabel.font = .systemFont(ofSize: 15, weight: .medium)
-        welcomeLabel.font = .systemFont(ofSize: 10, weight: .light)
-    } else {
-        acceptLabel.font = .systemFont(ofSize: 20, weight: .medium);
-        receiveLabel.font = .systemFont(ofSize: 20, weight: .medium);
-        fundLabel.font = .systemFont(ofSize: 20, weight: .medium)
-        welcomeLabel.font = .systemFont(ofSize: 16, weight: .medium)
+    
+    func setupUI() {
+        
+        welcomeLabel.font = .systemFont(ofSize: 17, weight: .medium)
+        
+        buttonTapped.backgroundColor = .white
+        buttonTapped.layer.cornerRadius = 20
+        
+        logotipImage.layer.cornerRadius = 60
+        
+        alredyAcardButton.layer.cornerRadius = 15
+        alredyAcardButton.setTitleColor(.white, for: .normal)
     }
-}
 }
