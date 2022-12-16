@@ -43,7 +43,8 @@
                 <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vdc-6s-P8E">
                     <rect key="frame" x="0.0" y="42" width="334" height="34"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="334" id="lal-VF-amI"/>
+                        <constraint firstAttribute="width" constant="344" id="lal-VF-amI"/>
+                        <constraint firstAttribute="width" secondItem="Vdc-6s-P8E" secondAttribute="height" multiplier="167:17" id="or0-0L-CoP"/>
                         <constraint firstAttribute="height" constant="34" id="y84-OU-Qwz"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -55,8 +56,10 @@
             <constraints>
                 <constraint firstItem="XmT-yf-8Ll" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ew5-R0-6Uv"/>
                 <constraint firstItem="7n6-w5-akt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HzK-Qy-XeF"/>
+                <constraint firstItem="Vdc-6s-P8E" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.300885" id="f98-26-rge"/>
                 <constraint firstItem="XmT-yf-8Ll" firstAttribute="top" secondItem="Vdc-6s-P8E" secondAttribute="bottom" constant="10" id="p4j-FV-O1H"/>
                 <constraint firstItem="Vdc-6s-P8E" firstAttribute="top" secondItem="7n6-w5-akt" secondAttribute="bottom" constant="10" id="q4c-05-7bi"/>
+                <constraint firstItem="Vdc-6s-P8E" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="wit-S9-kCX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="73.913043478260875" y="341.18303571428572"/>
