@@ -31,31 +31,31 @@ class PasswordTextFiledView: UIView {
         public override init(frame: CGRect) {
             super.init(frame: frame)
             
-            Bundle.main.loadNibNamed("PasswordTextFieldView", owner: self, options: nil)
-            addSubview(contentView)
-                    contentView.frame = bounds
-                    contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            commonInit()
             configureShowTextButton()
-            setupText()
             setupUI()
-            passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-            configureShowTextButton()
-            
+            setupText()
         }
             
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
             
-            Bundle.main.loadNibNamed("PasswordTextFieldView", owner: self, options: nil)
-            addSubview(contentView)
-                    contentView.frame = bounds
-                    contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            commonInit()
             configureShowTextButton()
             setupUI()
             setupText()
-            passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
+
+    // MARK: - Private methods
     
+    private func commonInit() {
+        Bundle.main.loadNibNamed("PasswordTextFieldView", owner: self, options: nil)
+        addSubview(contentView)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+        
     // MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
