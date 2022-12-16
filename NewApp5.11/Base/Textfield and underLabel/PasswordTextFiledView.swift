@@ -15,14 +15,18 @@ protocol PasswordTextFieldProtocol: AnyObject {
 
 class PasswordTextFiledView: UIView {
 
+    // MARK: - Outlets
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var wrongPasswordLabel: UILabel!
     
+    // MARK: - Public properties
+    
     var tfDelegate: PasswordTextFieldProtocol?
     
-// MARK: Init
+    // MARK: - Private methods
         
         public override init(frame: CGRect) {
             super.init(frame: frame)
@@ -49,6 +53,7 @@ class PasswordTextFiledView: UIView {
             passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
     
+    // MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
        
@@ -68,6 +73,7 @@ class PasswordTextFiledView: UIView {
         wrongPasswordLabel.text = "Поле должно содержать минимум 6 символов"
         }
     }
+    // MARK: - Private methods
     
     private func configureShowTextButton() {
             let showTextButton = UIButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
@@ -77,17 +83,16 @@ class PasswordTextFiledView: UIView {
             showTextButton.addTarget(self, action: #selector(showTextButtonTapped), for: .touchUpInside)
         passwordTextField.rightView = showTextButton
         passwordTextField.rightViewMode = .always
-    
-        
+    }
 }
-}
+
+// MARK: - Extension for layout
 extension PasswordTextFiledView {
     
     func setupText() {
         wrongPasswordLabel.font = .systemFont(ofSize: 11, weight: .medium)
         wrongPasswordLabel.textColor = .red
     }
-    
 }
 
 extension PasswordTextFiledView {
@@ -96,7 +101,6 @@ extension PasswordTextFiledView {
         passwordLabel.text = "Password"
         passwordLabel.shadowColor = .gray
         wrongPasswordLabel.isHidden = true
-        
         wrongPasswordLabel.font = UIFont.systemFont(ofSize: 10, weight: .bold)
     }
 }
