@@ -96,3 +96,17 @@ extension PasswordTextFiledView {
     }
 }
 
+extension PasswordTextFiledView{
+
+    func buttonIsEnabled() {
+
+        if wrongPasswordLabel.isHidden && passwordTextField.text != "" {
+//            loginButton.isEnabled = true
+            print("Helsso")
+        } else {
+//            loginButton.isEnabled = false
+            print("HOrao")
+        }
+
+    }
+}

@@ -11,6 +11,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
    
     // MARK: - Outlets
     
+    @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var emailView: EmailTextFieldView!
     @IBOutlet weak var passwordView: PasswordTextFiledView!
     @IBOutlet weak var createANewButton: UIButton!
@@ -29,10 +30,43 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         initializeSetup()
         setupUI()
         setupText()
+        
     }
     
     @IBAction func loginButtoAction(_ sender: Any) {
-//        buttonIsEnabled()
+
+        if passwordView.wrongPasswordLabel.isHidden && emailView.wrongEmailLabel.isHidden{
+            loginButton.isEnabled = true
+            
+        }else if passwordView.wrongPasswordLabel.isHidden == false && emailView.wrongEmailLabel.isHidden == false  {
+            let alert = UIAlertController(title: "Вы не заполнили оба поля", message: nil, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+             
+            }))
+             
+            self.present(alert, animated: true)
+        }else if emailView.wrongEmailLabel.isHidden == false{
+            let alert = UIAlertController(title: "Вы некорректно заполнили логин", message: nil, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+             
+            }))
+             
+            self.present(alert, animated: true)
+            
+        }else if passwordView.wrongPasswordLabel.isHidden == false  {
+            
+            let alert = UIAlertController(title: "Вы некорректно заполнили пароль", message: nil, preferredStyle: .alert)
+             
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+             
+            }))
+             
+            self.present(alert, animated: true)
+        }else {
+            print("opa")
+        }
     }
     
     // MARK: - Private methods
@@ -119,7 +153,7 @@ extension SecondViewController: EmailTextFieldDelegate {
 
 
 // MARK: - Extension for PasswordTextField (hide password textfield)
-//extension SecondViewController {
+//extension SecondViewController{
 //
 //    func buttonIsEnabled() {
 //

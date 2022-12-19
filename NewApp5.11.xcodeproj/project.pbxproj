@@ -49,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD970F1A295079AB00508C72 /* First controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDE5BE10293E70C50069B5DE /* ViewController.swift */,
+				DDE5BE12293E70C50069B5DE /* Main.storyboard */,
+			);
+			path = "First controller";
+			sourceTree = "<group>";
+		};
+		DD970F1B295079D400508C72 /* Second Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDE5BE22293E75A80069B5DE /* SecondViewController.swift */,
+				DDE5BE20293E759E0069B5DE /* SecondViewController.storyboard */,
+			);
+			path = "Second Controller";
+			sourceTree = "<group>";
+		};
 		DDCEDDC8294355CF004F4D43 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,14 +86,12 @@
 			path = System;
 			sourceTree = "<group>";
 		};
-		DDCEDDCA29435604004F4D43 /* ViewControllers */ = {
+		DDCEDDCA29435604004F4D43 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				DDE5BE20293E759E0069B5DE /* SecondViewController.storyboard */,
-				DDE5BE12293E70C50069B5DE /* Main.storyboard */,
 				DDE5BE17293E70C70069B5DE /* LaunchScreen.storyboard */,
 			);
-			path = ViewControllers;
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		DDCEDDCB29437785004F4D43 /* Textfield and underLabel */ = {
@@ -108,11 +124,11 @@
 		DDE5BE0B293E70C50069B5DE /* NewApp5.11 */ = {
 			isa = PBXGroup;
 			children = (
-				DDCEDDC9294355E2004F4D43 /* System */,
-				DDE5BE10293E70C50069B5DE /* ViewController.swift */,
-				DDE5BE22293E75A80069B5DE /* SecondViewController.swift */,
+				DD970F1A295079AB00508C72 /* First controller */,
+				DD970F1B295079D400508C72 /* Second Controller */,
 				DDCEDDC8294355CF004F4D43 /* Base */,
-				DDCEDDCA29435604004F4D43 /* ViewControllers */,
+				DDCEDDC9294355E2004F4D43 /* System */,
+				DDCEDDCA29435604004F4D43 /* LaunchScreen */,
 			);
 			path = NewApp5.11;
 			sourceTree = "<group>";
