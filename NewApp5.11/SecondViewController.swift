@@ -71,7 +71,7 @@ extension SecondViewController {
 
 // MARK: - Extension for textField delegate
     
-extension SecondViewController: PasswordTextFieldProtocol{
+extension SecondViewController: PasswordTextFieldDelegate{
     func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
         if textField.text!.count >= 6 {
             errorLabel.isHidden = true

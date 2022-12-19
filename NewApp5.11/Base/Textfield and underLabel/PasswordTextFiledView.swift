@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PasswordTextFieldProtocol: AnyObject {
+protocol PasswordTextFieldDelegate: AnyObject {
 
     func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel)
     
@@ -24,7 +24,7 @@ class PasswordTextFiledView: UIView {
     
     // MARK: - Public properties
     
-    var tfDelegate: PasswordTextFieldProtocol?
+    var tfDelegate: PasswordTextFieldDelegate?
     
     // MARK: - Private methods
         
