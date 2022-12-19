@@ -45,7 +45,6 @@ class EmailTextFieldView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         setupText()
-        wrongEmailLabel.text = "sosa"
         emailTextfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
@@ -63,7 +62,6 @@ extension EmailTextFieldView {
     func setupText() {
         wrongEmailLabel.font = .systemFont(ofSize: 11, weight: .medium)
         wrongEmailLabel.textColor = .red
-        emailLabel.text = "E-mail adress"
         emailLabel.shadowColor = .gray
         emailTextfield.autocorrectionType = .no
         wrongEmailLabel.font =  UIFont.systemFont(ofSize: 10, weight: .bold)

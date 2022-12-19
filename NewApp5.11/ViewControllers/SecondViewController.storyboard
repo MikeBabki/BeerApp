@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="424" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-t7-Ijz">
-                                <rect key="frame" x="45" y="491" width="67" height="31"/>
+                                <rect key="frame" x="45" y="463" width="141" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="p3h-t7-Ijz" secondAttribute="height" multiplier="141:70" id="T6z-PE-Ugg"/>
                                 </constraints>
@@ -36,7 +36,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMR-Y7-4rt" customClass="PasswordTextFiledView" customModule="NewApp5_11" customModuleProvider="target">
-                                <rect key="frame" x="35" y="333" width="344" height="113"/>
+                                <rect key="frame" x="35" y="305" width="344" height="113"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myp-du-GaG" customClass="EmailTextFieldView" customModule="NewApp5_11" customModuleProvider="target">
-                                <rect key="frame" x="35" y="212" width="344" height="113"/>
+                                <rect key="frame" x="35" y="184" width="344" height="113"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-jg-8QZ">
-                                <rect key="frame" x="160" y="491" width="67" height="31"/>
+                                <rect key="frame" x="234" y="463" width="145" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="i5d-jg-8QZ" secondAttribute="height" multiplier="29:14" id="c8w-R8-589"/>
                                 </constraints>
@@ -69,7 +69,7 @@
                             <constraint firstItem="pMR-Y7-4rt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ChZ-ZM-fRb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i5d-jg-8QZ" secondAttribute="trailing" constant="35" id="Cro-Uo-qcn"/>
                             <constraint firstItem="WHt-FE-rGg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="DAJ-bL-0H4"/>
-                            <constraint firstItem="myp-du-GaG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="168" id="GmL-45-KF4"/>
+                            <constraint firstItem="myp-du-GaG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="140" id="GmL-45-KF4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="myp-du-GaG" secondAttribute="trailing" constant="35" id="HHU-QX-4Ch"/>
                             <constraint firstAttribute="bottom" secondItem="UTb-6C-5wV" secondAttribute="bottom" id="K9Q-pX-yos"/>
                             <constraint firstItem="myp-du-GaG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="StY-Kz-ems"/>
@@ -90,6 +90,7 @@
                             <constraint firstItem="pMR-Y7-4rt" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.830918" id="uVD-0h-ks1"/>
                             <constraint firstItem="myp-du-GaG" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.830918" id="v4C-iC-bOb"/>
                             <constraint firstItem="UTb-6C-5wV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-200" id="wYl-KY-8fS"/>
+                            <constraint firstItem="UTb-6C-5wV" firstAttribute="leading" secondItem="pMR-Y7-4rt" secondAttribute="trailing" constant="-379" id="yW6-Aw-XuY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WHt-FE-rGg" secondAttribute="trailing" constant="40" id="zEn-wu-Ko5"/>
                         </constraints>
                     </view>

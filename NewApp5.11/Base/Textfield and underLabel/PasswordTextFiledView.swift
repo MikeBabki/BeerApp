@@ -63,9 +63,6 @@ class PasswordTextFiledView: UIView {
     @objc func showTextButtonTapped(_ sender: UIButton) {
         sender.setImage((passwordTextField.isSecureTextEntry ? UIImage(systemName: "eye") : UIImage(systemName: "eye.slash.fill"))?.withRenderingMode(.alwaysTemplate), for: .normal)
             passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
-        }
-    @objc func textFieldChanging(_ textField: UITextField) {
-       
     }
     // MARK: - Private methods
     
