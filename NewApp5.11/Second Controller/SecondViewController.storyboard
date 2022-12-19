@@ -24,6 +24,9 @@
                                 <rect key="frame" x="148" y="730" width="118" height="54"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="registrationButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="O3I-Tb-Dni"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMR-Y7-4rt" customClass="PasswordTextFiledView" customModule="NewApp5_11" customModuleProvider="target">
                                 <rect key="frame" x="18" y="355" width="378" height="100"/>

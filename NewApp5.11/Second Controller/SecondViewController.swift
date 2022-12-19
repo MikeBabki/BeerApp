@@ -25,12 +25,19 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailView.wrongEmailLabel.isHidden = true
-        
         initializeSetup()
         setupUI()
         setupText()
         
+    }
+    
+    @IBAction func registrationButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "RegistrationViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+            
+            let backItem = UIBarButtonItem(title: "Назад", style: .bordered, target: nil, action: nil)
+            navigationItem.backBarButtonItem = backItem
+            navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func loginButtoAction(_ sender: Any) {
@@ -83,12 +90,6 @@ extension SecondViewController {
     
     func setupText() {
         
-        emailView.emailLabel.text = "Login"
-        emailView.wrongEmailLabel.text = "Sasa"
-        
-        passwordView.wrongPasswordLabel.text = "Koka"
-        passwordView.passwordLabel.text = "Password"
-        
         createANewButton.setTitle("CREATE A NEW ACCOUNT", for: .normal)
         createANewButton.setTitleColor(.white, for: .normal)
         
@@ -129,9 +130,14 @@ extension SecondViewController: PasswordTextFieldDelegate{
     func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
         if textField.text!.count >= 6 {
             errorLabel.isHidden = true
+            textField.layer.borderColor = UIColor.white.cgColor
+            textField.layer.cornerRadius = 5
         } else {
             errorLabel.isHidden = false
             errorLabel.text = "Поле должно содержать минимум 6 символов"
+            textField.layer.borderColor = UIColor.red.cgColor
+            textField.layer.borderWidth = 3.0
+
         }
     }
 }
@@ -141,9 +147,13 @@ extension SecondViewController: EmailTextFieldDelegate {
     func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel) {
         if textField.text!.contains("@") {
             wrongEmailLabel.isHidden = true
+            textField.layer.borderColor = UIColor.white.cgColor
+            textField.layer.cornerRadius = 5
         } else {
             wrongEmailLabel.isHidden = false
             wrongEmailLabel.text = "Поле должно содержать - @"
+            textField.layer.borderColor = UIColor.red.cgColor
+            textField.layer.borderWidth = 3.0
         }
     }
 }

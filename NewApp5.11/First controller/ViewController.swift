@@ -28,6 +28,14 @@ class ViewController: UIViewController {
         setupUI()
     }
     // MARK: - Actions
+    @IBAction func getCardButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "RegistrationViewController", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+            
+            let backItem = UIBarButtonItem(title: "Назад", style: .bordered, target: nil, action: nil)
+            navigationItem.backBarButtonItem = backItem
+            navigationController?.pushViewController(vc, animated: true)
+    }
     
     @IBAction func alredyACardTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)

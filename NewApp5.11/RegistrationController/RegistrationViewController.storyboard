@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="Y6W-OH-hqX" customClass="RegistrationViewController" customModule="NewApp5_11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="1643189730_66-phonoteka-org-p-fon-dlya-rabochego-stola-minimalizm-stilni-69" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-wo-Oi9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="6c1-tP-2eO">
+                                <rect key="frame" x="18" y="120" width="378" height="650"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noX-JI-0by" customClass="EmailTextFieldView" customModule="NewApp5_11" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="378" height="75"/>
+                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="JUO-YP-k6Q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8f-Sm-fZ2">
+                                        <rect key="frame" x="0.0" y="115" width="378" height="75"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="MQu-sZ-0of"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BP-Ut-163" customClass="PasswordTextFiledView" customModule="NewApp5_11" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="230" width="378" height="75"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="vIf-a2-kX3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-FH-AFN" customClass="PasswordTextFiledView" customModule="NewApp5_11" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="345" width="378" height="75"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="sFH-cu-awF"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mC4-as-MxK">
+                                        <rect key="frame" x="0.0" y="460" width="378" height="75"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="c6E-d7-nfg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Iv-6a-gVr">
+                                        <rect key="frame" x="0.0" y="575" width="378" height="75"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="KNc-dK-Po1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-Kt-oxX">
+                                <rect key="frame" x="161" y="795" width="93" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6c1-tP-2eO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="76" id="8yh-Kp-c8o"/>
+                            <constraint firstItem="6c1-tP-2eO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9ub-KJ-bI7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Kuw-Kt-oxX" secondAttribute="bottom" constant="30" id="Edj-Ed-MuB"/>
+                            <constraint firstItem="Kuw-Kt-oxX" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FZ8-vE-WgL"/>
+                            <constraint firstItem="Ehn-wo-Oi9" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="H5P-IM-Rbz"/>
+                            <constraint firstItem="Ehn-wo-Oi9" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="RlH-rN-i9g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6c1-tP-2eO" secondAttribute="trailing" constant="18" id="Ruw-OB-D98"/>
+                            <constraint firstItem="6c1-tP-2eO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="XKy-xe-JF9"/>
+                            <constraint firstItem="Ehn-wo-Oi9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jIV-op-E7t"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ehn-wo-Oi9" secondAttribute="trailing" id="un3-7z-C4b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Ehn-wo-Oi9" id="Dsd-NL-ihN"/>
+                        <outlet property="emailView" destination="noX-JI-0by" id="Rre-b8-6Mn"/>
+                        <outlet property="nameView" destination="mC4-as-MxK" id="vbN-8e-Ant"/>
+                        <outlet property="passwordView" destination="5BP-Ut-163" id="8aj-J8-Te3"/>
+                        <outlet property="phoneNumberView" destination="l8f-Sm-fZ2" id="jhP-b2-MGE"/>
+                        <outlet property="registerButton" destination="Kuw-Kt-oxX" id="B3X-uN-aZS"/>
+                        <outlet property="secondPasswordView" destination="sdk-FH-AFN" id="wfz-zl-5H3"/>
+                        <outlet property="stackView" destination="6c1-tP-2eO" id="qW1-3Y-k6n"/>
+                        <outlet property="subNameView" destination="7Iv-6a-gVr" id="OfS-Dx-xLZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1643189730_66-phonoteka-org-p-fon-dlya-rabochego-stola-minimalizm-stilni-69" width="3840" height="2400"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

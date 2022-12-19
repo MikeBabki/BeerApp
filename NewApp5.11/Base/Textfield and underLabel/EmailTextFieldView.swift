@@ -35,6 +35,7 @@ class EmailTextFieldView: UIView {
         super.init(coder: aDecoder)
         
         commonInit()
+        setupUI()
     }
     
     // MARK: - Private methods
@@ -67,4 +68,10 @@ extension EmailTextFieldView {
         wrongEmailLabel.font =  UIFont.systemFont(ofSize: 10, weight: .bold)
     }
     
+}
+extension EmailTextFieldView {
+    
+    func setupUI() {
+        wrongEmailLabel.isHidden = true
+    }
 }
