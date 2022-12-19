@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,14 +36,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-Ey-OJy">
-                                <rect key="frame" x="30" y="463" width="354" height="55"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="gVM-Ey-OJy">
+                                <rect key="frame" x="18" y="463" width="378" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-t7-Ijz">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="PpY-HQ-Kh2"/>
-                                            <constraint firstAttribute="width" constant="144" id="zXh-zp-Max"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -51,10 +51,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-jg-8QZ">
-                                        <rect key="frame" x="210" y="0.0" width="144" height="55"/>
+                                        <rect key="frame" x="222" y="0.0" width="156" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="L3W-9q-hMQ"/>
-                                            <constraint firstAttribute="width" constant="144" id="S1V-6x-sai"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -71,17 +70,18 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pMR-Y7-4rt" secondAttribute="trailing" constant="18" id="FtV-9c-uJL"/>
                             <constraint firstItem="pMR-Y7-4rt" firstAttribute="top" secondItem="myp-du-GaG" secondAttribute="bottom" constant="10" id="POq-7q-9km"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="myp-du-GaG" secondAttribute="trailing" constant="18" id="T3k-tr-kUp"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gVM-Ey-OJy" secondAttribute="trailing" constant="30" id="c7A-xN-B07"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gVM-Ey-OJy" secondAttribute="trailing" constant="18" id="c7A-xN-B07"/>
                             <constraint firstItem="myp-du-GaG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="eiq-kr-w9l"/>
                             <constraint firstItem="gVM-Ey-OJy" firstAttribute="top" secondItem="pMR-Y7-4rt" secondAttribute="bottom" constant="8" symbolic="YES" id="flc-bw-Dnx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WHt-FE-rGg" secondAttribute="bottom" constant="40" id="k6S-81-5Ic"/>
-                            <constraint firstItem="gVM-Ey-OJy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="mJL-Dh-lw9"/>
+                            <constraint firstItem="gVM-Ey-OJy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="mJL-Dh-lw9"/>
                             <constraint firstItem="pMR-Y7-4rt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="uP9-XE-bNo"/>
                             <constraint firstItem="pMR-Y7-4rt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="y2E-vn-adw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WHt-FE-rGg" secondAttribute="trailing" constant="40" id="zEn-wu-Ko5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonsStackView" destination="gVM-Ey-OJy" id="b00-tq-yhd"/>
                         <outlet property="createANewButton" destination="WHt-FE-rGg" id="2gD-u2-RvQ"/>
                         <outlet property="emailView" destination="myp-du-GaG" id="WOI-3P-oGL"/>
                         <outlet property="forgottenButton" destination="i5d-jg-8QZ" id="ekL-eE-gIg"/>

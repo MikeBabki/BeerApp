@@ -16,6 +16,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createANewButton: UIButton!
     @IBOutlet weak var forgottenButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var buttonsStackView: UIStackView!
     @IBOutlet weak var loginLabel: UIImageView!
     
     // MARK: - Lifecycle
@@ -26,6 +27,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         emailView.wrongEmailLabel.isHidden = true
         
         initializeSetup()
+        setupUI()
         setupText()
     }
     
@@ -66,6 +68,24 @@ extension SecondViewController {
         
         forgottenButton.layer.cornerRadius = 20
         forgottenButton.setTitleColor(.white, for: .normal)
+    }
+}
+
+// MARK: - Extension for layout
+
+extension SecondViewController {
+    
+    func setupUI() {
+        if UIScreen.main.bounds.width < 375 {
+            buttonsStackView.setCustomSpacing(6, after: loginButton)
+        }
+        else {
+            buttonsStackView.setCustomSpacing(66, after: loginButton)
+        }
+        buttonsStackView.alignment = .fill
+        buttonsStackView.distribution = .fillEqually
+        buttonsStackView.axis = .horizontal
+        
     }
 }
 
