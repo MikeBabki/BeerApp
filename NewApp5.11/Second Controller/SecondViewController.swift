@@ -46,6 +46,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             }))
              
             self.present(alert, animated: true)
+            
         }else if emailView.wrongEmailLabel.isHidden == false{
             let alert = UIAlertController(title: "Вы некорректно заполнили логин", message: nil, preferredStyle: .alert)
             
@@ -55,7 +56,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
              
             self.present(alert, animated: true)
             
-        }else if passwordView.wrongPasswordLabel.isHidden == false  {
+        }else  {
             
             let alert = UIAlertController(title: "Вы некорректно заполнили пароль", message: nil, preferredStyle: .alert)
              
@@ -64,10 +65,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             }))
              
             self.present(alert, animated: true)
-        }else {
-            print("opa")
         }
     }
+    
     
     // MARK: - Private methods
     
