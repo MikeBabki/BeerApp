@@ -126,11 +126,14 @@ extension RegistrationViewController: PhoneNumberDelegate {
     }
     }
 }
-//extension RegistrationViewController: EmailTextFieldDelegate {
-//
-//
-//
-//}
+
+extension RegistrationViewController: EmailTextFieldDelegate {
+    
+    func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel) {
+        
+    }
+    
+}
 //
 //extension RegistrationViewController: PasswordTextFieldDelegate {
 //

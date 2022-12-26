@@ -6,8 +6,9 @@
 //
 
 import UIKit
-    protocol EmailTextFieldDelegate: AnyObject {
-    func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel)
+
+protocol EmailTextFieldDelegate: AnyObject {
+    func takeString(textField: UITextField)
 }
 
 class EmailTextFieldView: UIView {
@@ -21,7 +22,7 @@ class EmailTextFieldView: UIView {
     
     // MARK: - Public properties
     
-    var tfDelegate: EmailTextFieldDelegate?
+    weak var tfDelegate: EmailTextFieldDelegate?
     
     // MARK: - Init
     
@@ -35,7 +36,6 @@ class EmailTextFieldView: UIView {
         super.init(coder: aDecoder)
         
         commonInit()
-        setupUI()
     }
     
     // MARK: - Private methods
@@ -46,13 +46,14 @@ class EmailTextFieldView: UIView {
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         setupText()
+        setupUI()
         emailTextfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     // MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-        tfDelegate?.takeString(textField: textField, emailLabel: emailLabel, wrongEmailLabel: wrongEmailLabel)
+        tfDelegate?.takeString(textField: textField)
     }
 }
 
