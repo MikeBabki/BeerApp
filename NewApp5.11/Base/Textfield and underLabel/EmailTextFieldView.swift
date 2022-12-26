@@ -38,16 +38,30 @@ class EmailTextFieldView: UIView {
         commonInit()
     }
     
+    func showError() {
+        wrongEmailLabel.isHidden = false
+        wrongEmailLabel.text = "Поле должно содержать - @"
+        emailTextfield.layer.borderColor = UIColor.red.cgColor
+        emailTextfield.layer.borderWidth = 3.0
+    }
+    
+    func hideError() {
+        wrongEmailLabel.isHidden = true
+        emailTextfield.layer.borderColor = UIColor.white.cgColor
+        emailTextfield.layer.cornerRadius = 5
+    }
+    
 // MARK: - Private methods
     
     private func commonInit() {
+        
         Bundle.main.loadNibNamed("EmailTextFieldView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         setupText()
-        setupUI()
         emailTextfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        setupUI()
     }
     
 // MARK: - Actions
@@ -73,6 +87,8 @@ extension EmailTextFieldView {
 extension EmailTextFieldView {
     
     func setupUI() {
+        emailTextfield.layer.borderColor = UIColor.white.cgColor
+        emailTextfield.layer.cornerRadius = 5
         wrongEmailLabel.isHidden = true
         emailLabel.text = "Email Adress"
     }

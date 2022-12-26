@@ -17,29 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="16431" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-pG-cDf">
-                                <rect key="frame" x="0.0" y="-56" width="414" height="968"/>
+                                <rect key="frame" x="0.0" y="-56" width="414" height="2400"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTv-8N-E7n" userLabel="ButtonContentView">
-                                <rect key="frame" x="5" y="812" width="404" height="0.0"/>
+                                <rect key="frame" x="0.0" y="790" width="414" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuw-Kt-oxX">
-                                        <rect key="frame" x="168.5" y="9" width="67" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIs-vD-vGS">
+                                        <rect key="frame" x="16" y="16" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qsb-EA-l1N"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <color key="baseForegroundColor" red="0.91764706370000004" green="0.270588249" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="regButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FDa-p3-8RH"/>
+                                            <action selector="regButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NFy-hH-3a7"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="tintColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Kuw-Kt-oxX" secondAttribute="bottom" constant="-40" id="Bx9-YJ-fmf"/>
-                                    <constraint firstItem="Kuw-Kt-oxX" firstAttribute="centerX" secondItem="FTv-8N-E7n" secondAttribute="centerX" id="xgF-rY-ZTm"/>
+                                    <constraint firstItem="EIs-vD-vGS" firstAttribute="top" secondItem="FTv-8N-E7n" secondAttribute="top" constant="16" id="8kd-Td-6Sx"/>
+                                    <constraint firstAttribute="trailing" secondItem="EIs-vD-vGS" secondAttribute="trailing" constant="16" id="JAg-ev-x1j"/>
+                                    <constraint firstItem="EIs-vD-vGS" firstAttribute="leading" secondItem="FTv-8N-E7n" secondAttribute="leading" constant="16" id="R0M-2a-FKK"/>
+                                    <constraint firstAttribute="bottom" secondItem="EIs-vD-vGS" secondAttribute="bottom" constant="16" id="YQX-Iv-RaN"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMR-2n-JtY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="752"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMR-2n-JtY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="746"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzp-GU-6Ni">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
@@ -163,7 +170,7 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <color key="backgroundColor" red="0.68627450980392157" green="0.35634244738105031" blue="0.87058823529411766" alpha="0.4461362670068027" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="6c1-tP-2eO" secondAttribute="trailing" constant="14" id="3ue-As-spP"/>
                                             <constraint firstItem="92e-dm-Tgo" firstAttribute="top" secondItem="vzp-GU-6Ni" secondAttribute="top" constant="10" id="JIH-Wa-RVT"/>
@@ -185,19 +192,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="FTv-8N-E7n" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Fgs-9g-0Ds"/>
+                            <constraint firstItem="FTv-8N-E7n" firstAttribute="top" secondItem="RMR-2n-JtY" secondAttribute="bottom" id="1Hb-Dl-PJ2"/>
                             <constraint firstItem="0Vd-pG-cDf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LoJ-Hv-dAR"/>
                             <constraint firstItem="vzp-GU-6Ni" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="Lqr-Bz-f5Z"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FTv-8N-E7n" secondAttribute="bottom" constant="50" id="N8Z-EO-Vnl"/>
                             <constraint firstItem="RMR-2n-JtY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="NKT-yX-lVo"/>
+                            <constraint firstItem="FTv-8N-E7n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VMB-Vm-9QA"/>
                             <constraint firstItem="0Vd-pG-cDf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-100" id="W6b-BP-CSA"/>
                             <constraint firstItem="RMR-2n-JtY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="doM-dS-jpd"/>
-                            <constraint firstItem="FTv-8N-E7n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="hJz-wh-7gX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FTv-8N-E7n" secondAttribute="trailing" id="dvE-gp-kKs"/>
                             <constraint firstItem="RMR-2n-JtY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hzk-4a-WOB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0Vd-pG-cDf" secondAttribute="trailing" id="lX2-I3-ffY"/>
-                            <constraint firstItem="FTv-8N-E7n" firstAttribute="top" secondItem="0Vd-pG-cDf" secondAttribute="bottom" constant="-100" id="ln6-hv-gAP"/>
-                            <constraint firstItem="RMR-2n-JtY" firstAttribute="bottom" secondItem="FTv-8N-E7n" secondAttribute="bottom" id="nTm-a7-FY5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FTv-8N-E7n" secondAttribute="trailing" constant="5" id="obx-4W-q0p"/>
+                            <constraint firstItem="FTv-8N-E7n" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="m1q-Sd-SAt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -208,8 +213,7 @@
                         <outlet property="nameView" destination="mC4-as-MxK" id="vbN-8e-Ant"/>
                         <outlet property="passwordView" destination="5BP-Ut-163" id="8aj-J8-Te3"/>
                         <outlet property="phoneNumberView" destination="l8f-Sm-fZ2" id="wrE-8A-dFj"/>
-                        <outlet property="regButton" destination="Kuw-Kt-oxX" id="gyq-Oj-gPt"/>
-                        <outlet property="registerButton" destination="Kuw-Kt-oxX" id="B3X-uN-aZS"/>
+                        <outlet property="regButton" destination="EIs-vD-vGS" id="hvb-W3-YKi"/>
                         <outlet property="secondPasswordView" destination="sdk-FH-AFN" id="wfz-zl-5H3"/>
                         <outlet property="stackView" destination="6c1-tP-2eO" id="qW1-3Y-k6n"/>
                         <outlet property="subNameLabel" destination="seo-HR-AyW" id="nj1-Rc-kqq"/>
@@ -229,8 +233,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

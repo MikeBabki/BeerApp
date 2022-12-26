@@ -11,8 +11,6 @@ import InputMask
 public protocol PhoneNumberDelegate: AnyObject {
     func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String)
     func textFieldDidEndEditing(_ textField: UITextField)
-    
-    func takeString(textField: UITextField, phoneLabel: UILabel, wrongPhoneLabel: UILabel)
 }
 
 class PhoneNumberView: UIView {
@@ -45,6 +43,7 @@ class PhoneNumberView: UIView {
         commonInit()
     }
     
+    
     // MARK: - Private methods
     
     private func commonInit() {
@@ -65,7 +64,7 @@ class PhoneNumberView: UIView {
     // MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-        tfDelegate?.takeString(textField: textField, phoneLabel: phoneLabel, wrongPhoneLabel: wrongPhoneLabel)
+        tfDelegate?.textField(textField, didFillMandatoryCharacters: true, didExtractValue: "")
     }
 }
 

@@ -46,6 +46,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         if passwordView.wrongPasswordLabel.isHidden && emailView.wrongEmailLabel.isHidden{
             loginButton.isEnabled = true
             
+//            let storyboard = UIStoryboard(name: "RegistrationViewController", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
+//                
+//                let backItem = UIBarButtonItem(title: "dddd", style: .bordered, target: nil, action: nil)
+//                navigationItem.backBarButtonItem = backItem
+//                navigationController?.pushViewController(vc, animated: true)
         }else if passwordView.wrongPasswordLabel.isHidden == false && emailView.wrongEmailLabel.isHidden == false  {
             let alert = UIAlertController(title: "Вы не заполнили оба поля", message: nil, preferredStyle: .alert)
             

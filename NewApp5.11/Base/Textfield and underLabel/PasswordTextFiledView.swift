@@ -38,7 +38,18 @@ class PasswordTextFiledView: UIView {
             
             commonInit()
         }
-
+    func showError() {
+        wrongPasswordLabel.isHidden = false
+        wrongPasswordLabel.text = "Поле должно содержать минимум 6 символов"
+        passwordTextField.layer.borderColor = UIColor.red.cgColor
+        passwordTextField.layer.borderWidth = 3.0
+    }
+    
+    func hideError() {
+        wrongPasswordLabel.isHidden = true
+        passwordTextField.layer.borderColor = UIColor.white.cgColor
+        passwordTextField.layer.cornerRadius = 5
+    }
     // MARK: - Private methods
     
     private func commonInit() {
@@ -48,8 +59,8 @@ class PasswordTextFiledView: UIView {
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         configureShowTextButton()
-        setupUI()
         setupText()
+        setupUI()
     }
         
     // MARK: - Actions
@@ -88,24 +99,11 @@ extension PasswordTextFiledView {
 extension PasswordTextFiledView {
     func setupUI() {
         passwordTextField.isSecureTextEntry = true
+        passwordTextField.layer.borderColor = UIColor.white.cgColor
+        passwordTextField.layer.cornerRadius = 5
         passwordLabel.text = "Password"
         passwordLabel.shadowColor = .gray
         wrongPasswordLabel.isHidden = true
         wrongPasswordLabel.font = UIFont.systemFont(ofSize: 10, weight: .bold)
-    }
-}
-
-extension PasswordTextFiledView{
-
-    func buttonIsEnabled() {
-
-        if wrongPasswordLabel.isHidden && passwordTextField.text != "" {
-//            loginButton.isEnabled = true
-            print("Helsso")
-        } else {
-//            loginButton.isEnabled = false
-            print("HOrao")
-        }
-
     }
 }
