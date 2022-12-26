@@ -32,10 +32,11 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registrationButtonAction(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "RegistrationViewController", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
             
-            let backItem = UIBarButtonItem(title: "Назад", style: .bordered, target: nil, action: nil)
+            let backItem = UIBarButtonItem(title: "dddd", style: .bordered, target: nil, action: nil)
             navigationItem.backBarButtonItem = backItem
             navigationController?.pushViewController(vc, animated: true)
     }
@@ -160,20 +161,4 @@ extension SecondViewController: EmailTextFieldDelegate {
 
 // MARK: - Extension for hidden label setupUI
     
-
-
-// MARK: - Extension for PasswordTextField (hide password textfield)
-//extension SecondViewController{
-//
-//    func buttonIsEnabled() {
-//
-//        if wrongPasswordLabel.isHidden && wrongLoginLabel.isHidden && passwordTextField.text != "" && emailTextField.text != "" {
-//            loginButton.isEnabled = true
-//            print("Helsso")
-//        } else {
-//            loginButton.isEnabled = false
-//        }
-//
-//    }
-//}
 

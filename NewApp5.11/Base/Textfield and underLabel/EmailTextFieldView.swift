@@ -6,7 +6,7 @@
 //
 
 import UIKit
-protocol EmailTextFieldDelegate: AnyObject {
+    protocol EmailTextFieldDelegate: AnyObject {
     func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel)
 }
 
@@ -73,5 +73,6 @@ extension EmailTextFieldView {
     
     func setupUI() {
         wrongEmailLabel.isHidden = true
+        emailLabel.text = "Email Adress"
     }
 }

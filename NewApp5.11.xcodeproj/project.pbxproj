@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD970F1D29508AF200508C72 /* RegistrationViewController.swift */; };
+		DDA1CC172953836000972EF7 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = DDA1CC162953836000972EF7 /* InputMask */; };
 		DDBC1F382950BE7E009118A9 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */; };
 		DDBC1F3A2950CF4B009118A9 /* phoneNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F392950CF4B009118A9 /* phoneNumberView.xib */; };
 		DDBC1F3C2950D027009118A9 /* phoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC1F3B2950D027009118A9 /* phoneNumberView.swift */; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA1CC172953836000972EF7 /* InputMask in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +82,8 @@
 			children = (
 				DD970F1D29508AF200508C72 /* RegistrationViewController.swift */,
 				DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */,
-				DDBC1F392950CF4B009118A9 /* phoneNumberView.xib */,
 				DDBC1F3B2950D027009118A9 /* phoneNumberView.swift */,
+				DDBC1F392950CF4B009118A9 /* phoneNumberView.xib */,
 			);
 			path = RegistrationController;
 			sourceTree = "<group>";
@@ -169,6 +171,9 @@
 			dependencies = (
 			);
 			name = NewApp5.11;
+			packageProductDependencies = (
+				DDA1CC162953836000972EF7 /* InputMask */,
+			);
 			productName = NewApp5.11;
 			productReference = DDE5BE09293E70C50069B5DE /* NewApp5.11.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +202,9 @@
 				Base,
 			);
 			mainGroup = DDE5BE00293E70C50069B5DE;
+			packageReferences = (
+				DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
+			);
 			productRefGroup = DDE5BE0A293E70C50069B5DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -454,6 +462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RedMadRobot/input-mask-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDA1CC162953836000972EF7 /* InputMask */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */;
+			productName = InputMask;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDE5BE01293E70C50069B5DE /* Project object */;
 }
