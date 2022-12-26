@@ -9,8 +9,7 @@ import UIKit
 
 protocol PasswordTextFieldDelegate: AnyObject {
 
-    func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel)
-    
+    func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel)
 }
 
 class PasswordTextFiledView: UIView {
@@ -57,7 +56,7 @@ class PasswordTextFiledView: UIView {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
        
-        tfDelegate?.takeString(textField: textField, mainLabel: passwordLabel, errorLabel: wrongPasswordLabel)
+        tfDelegate?.take(textField: textField, mainLabel: passwordLabel, errorLabel: wrongPasswordLabel)
        
     }
     @objc func showTextButtonTapped(_ sender: UIButton) {

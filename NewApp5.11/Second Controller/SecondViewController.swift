@@ -128,7 +128,7 @@ extension SecondViewController {
 // MARK: - Extension for textField delegate
     
 extension SecondViewController: PasswordTextFieldDelegate{
-    func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
+    func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
         if textField.text!.count >= 6 {
             errorLabel.isHidden = true
             textField.layer.borderColor = UIColor.white.cgColor

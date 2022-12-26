@@ -115,7 +115,6 @@ extension RegistrationViewController: PhoneNumberDelegate {
                     textField.layer.borderWidth = 3.0
                 }
     }
-}
     
     @objc(takeStringWithTextField:phoneLabel:wrongPhoneLabel:) func takeString(textField: UITextField, phoneLabel emailLabel: UILabel, wrongPhoneLabel wrongEmailLabel: UILabel) {
         
@@ -125,8 +124,14 @@ extension RegistrationViewController: PhoneNumberDelegate {
 
 extension RegistrationViewController: PasswordTextFieldDelegate {
     
-    func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
-        textField.text
+    func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
+        print("ti pidor")
     }
+
+//
+    
+//    func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
+//        textField.text
+//    }
 
 }
