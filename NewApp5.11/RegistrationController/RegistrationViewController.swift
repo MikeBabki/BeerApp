@@ -89,6 +89,12 @@ extension RegistrationViewController {
 }
 // MARK: - Extension for textField delegate
     
+extension RegistrationViewController: EmailTextFieldDelegate {
+    func takeString(textField: UITextField) {
+        textField.text
+    }
+}
+
 extension RegistrationViewController: PhoneNumberDelegate {
     func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
         
@@ -97,37 +103,31 @@ extension RegistrationViewController: PhoneNumberDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
     }
-//    @objc(takeStringWithTextField:mainLabel:errorLabel:) func takeString(textField: UITextField, mainLabel phoneLabel: UILabel, errorLabel wrongPhoneLabel: UILabel) {
-//        if textField.text!.count < 11 {
-//                    wrongPhoneLabel.isHidden = false
-//            wrongPhoneLabel.text = "Opa"
-//                    textField.layer.borderColor = UIColor.white.cgColor
-//                    textField.layer.cornerRadius = 5
-//                } else {
-//                    wrongPhoneLabel.isHidden = false
-//                    wrongPhoneLabel.text = "Неверно введен номер"
-//                    textField.layer.borderColor = UIColor.red.cgColor
-//                    textField.layer.borderWidth = 3.0
-//                }
-//    }
-}
-
-extension RegistrationViewController: EmailTextFieldDelegate {
-    func takeString(textField: UITextField) {
-        print(textField.text)
+    @objc(takeStringWithTextField:mainLabel:errorLabel:) func takeString(textField: UITextField, mainLabel phoneLabel: UILabel, errorLabel wrongPhoneLabel: UILabel) {
+        if textField.text!.count < 11 {
+                    wrongPhoneLabel.isHidden = false
+            wrongPhoneLabel.text = "Opa"
+                    textField.layer.borderColor = UIColor.white.cgColor
+                    textField.layer.cornerRadius = 5
+                } else {
+                    wrongPhoneLabel.isHidden = false
+                    wrongPhoneLabel.text = "Неверно введен номер"
+                    textField.layer.borderColor = UIColor.red.cgColor
+                    textField.layer.borderWidth = 3.0
+                }
     }
-    
+}
     
     @objc(takeStringWithTextField:phoneLabel:wrongPhoneLabel:) func takeString(textField: UITextField, phoneLabel emailLabel: UILabel, wrongPhoneLabel wrongEmailLabel: UILabel) {
         
-        print(textField.text)
+        textField.text
     }
 }
 
 extension RegistrationViewController: PasswordTextFieldDelegate {
     
     func takeString(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
-        print(textField.text)
+        textField.text
     }
 
 }

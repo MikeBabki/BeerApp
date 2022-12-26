@@ -48,17 +48,18 @@ class PhoneNumberView: UIView {
 // MARK: - Private methods
     
     private func commonInit() {
-        setupUI()
-        Bundle.main.loadNibNamed("phoneNumberView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("PhoneNumberView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        setupUI()
         setupText()
         phoneTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         maskedDelegate = MaskedTextFieldDelegate(primaryFormat: "+{7} ([000]) [000] [00]-[00]", autocomplete: false, autocompleteOnFocus: false, autoskip: false, rightToLeft: false, affineFormats: [], affinityCalculationStrategy: .wholeString, customNotations: [], onMaskedTextChangedCallback: nil, allowSuggestions: false)
                 maskedDelegate.listener = self
         phoneTextField.delegate = maskedDelegate
+        
     }
     
 // MARK: - Actions
