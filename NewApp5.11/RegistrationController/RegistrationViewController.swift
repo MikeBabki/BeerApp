@@ -21,7 +21,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
-    
     @IBOutlet weak var phoneNumberView: PhoneNumberView!
     @IBOutlet weak var emailView: EmailTextFieldView!
     @IBOutlet weak var nameView: UIView!

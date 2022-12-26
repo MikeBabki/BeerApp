@@ -17,7 +17,7 @@ public protocol PhoneNumberDelegate: AnyObject {
 
 class PhoneNumberView: UIView {
     
-// MARK: - Outlets
+    // MARK: - Outlets
     
     
     @IBOutlet weak var contentView: UIView!
@@ -25,13 +25,13 @@ class PhoneNumberView: UIView {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var wrongPhoneLabel: UILabel!
     
-// MARK: - Public properties
+    // MARK: - Public properties
     
     var maskedDelegate: MaskedTextFieldDelegate!
     var tfDelegate: PhoneNumberDelegate?
     var phone: String?
     
-// MARK: - Init
+    // MARK: - Init
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,7 +45,7 @@ class PhoneNumberView: UIView {
         commonInit()
     }
     
-// MARK: - Private methods
+    // MARK: - Private methods
     
     private func commonInit() {
         Bundle.main.loadNibNamed("PhoneNumberView", owner: self, options: nil)
@@ -57,12 +57,12 @@ class PhoneNumberView: UIView {
         phoneTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         maskedDelegate = MaskedTextFieldDelegate(primaryFormat: "+{7} ([000]) [000] [00]-[00]", autocomplete: false, autocompleteOnFocus: false, autoskip: false, rightToLeft: false, affineFormats: [], affinityCalculationStrategy: .wholeString, customNotations: [], onMaskedTextChangedCallback: nil, allowSuggestions: false)
-                maskedDelegate.listener = self
+        maskedDelegate.listener = self
         phoneTextField.delegate = maskedDelegate
         
     }
     
-// MARK: - Actions
+    // MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         tfDelegate?.takeString(textField: textField, phoneLabel: phoneLabel, wrongPhoneLabel: wrongPhoneLabel)
@@ -73,7 +73,7 @@ class PhoneNumberView: UIView {
 
 extension PhoneNumberView {
     
-    func setupText() {
+    func setupText() {        
         wrongPhoneLabel.font = .systemFont(ofSize: 11, weight: .medium)
         wrongPhoneLabel.textColor = .red
         phoneLabel.shadowColor = .gray
