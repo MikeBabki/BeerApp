@@ -10,8 +10,8 @@
 		DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD970F1D29508AF200508C72 /* RegistrationViewController.swift */; };
 		DDA1CC172953836000972EF7 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = DDA1CC162953836000972EF7 /* InputMask */; };
 		DDBC1F382950BE7E009118A9 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */; };
-		DDBC1F3A2950CF4B009118A9 /* phoneNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F392950CF4B009118A9 /* phoneNumberView.xib */; };
-		DDBC1F3C2950D027009118A9 /* phoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC1F3B2950D027009118A9 /* phoneNumberView.swift */; };
+		DDBC1F3A2950CF4B009118A9 /* PhoneNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */; };
+		DDBC1F3C2950D027009118A9 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */; };
 		DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */; };
 		DDCEDDC7294355CA004F4D43 /* PasswordTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */; };
 		DDCEDDCD294377AB004F4D43 /* EmailTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */; };
@@ -29,8 +29,8 @@
 /* Begin PBXFileReference section */
 		DD970F1D29508AF200508C72 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
-		DDBC1F392950CF4B009118A9 /* phoneNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = phoneNumberView.xib; sourceTree = "<group>"; };
-		DDBC1F3B2950D027009118A9 /* phoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneNumberView.swift; sourceTree = "<group>"; };
+		DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberView.xib; sourceTree = "<group>"; };
+		DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFiledView.swift; sourceTree = "<group>"; };
 		DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTextFieldView.xib; sourceTree = "<group>"; };
 		DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldView.swift; sourceTree = "<group>"; };
@@ -82,8 +82,6 @@
 			children = (
 				DD970F1D29508AF200508C72 /* RegistrationViewController.swift */,
 				DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */,
-				DDBC1F3B2950D027009118A9 /* phoneNumberView.swift */,
-				DDBC1F392950CF4B009118A9 /* phoneNumberView.xib */,
 			);
 			path = RegistrationController;
 			sourceTree = "<group>";
@@ -122,6 +120,8 @@
 				DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */,
 				DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */,
 				DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */,
+				DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */,
+				DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */,
 			);
 			path = "Textfield and underLabel";
 			sourceTree = "<group>";
@@ -221,7 +221,7 @@
 			files = (
 				DDE5BE19293E70C70069B5DE /* LaunchScreen.storyboard in Resources */,
 				DDCEDDCF294377B8004F4D43 /* EmailTextFieldView.xib in Resources */,
-				DDBC1F3A2950CF4B009118A9 /* phoneNumberView.xib in Resources */,
+				DDBC1F3A2950CF4B009118A9 /* PhoneNumberView.xib in Resources */,
 				DDE5BE21293E759E0069B5DE /* SecondViewController.storyboard in Resources */,
 				DDE5BE16293E70C70069B5DE /* Assets.xcassets in Resources */,
 				DDE5BE14293E70C50069B5DE /* Main.storyboard in Resources */,
@@ -243,7 +243,7 @@
 				DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */,
 				DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */,
 				DDE5BE0D293E70C50069B5DE /* AppDelegate.swift in Sources */,
-				DDBC1F3C2950D027009118A9 /* phoneNumberView.swift in Sources */,
+				DDBC1F3C2950D027009118A9 /* PhoneNumberView.swift in Sources */,
 				DDE5BE0F293E70C50069B5DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

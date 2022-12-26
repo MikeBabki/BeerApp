@@ -144,19 +144,32 @@ extension SecondViewController: PasswordTextFieldDelegate{
 }
 
 extension SecondViewController: EmailTextFieldDelegate {
-    
-    func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel) {
+    func takeString(textField: UITextField) {
         if textField.text!.contains("@") {
-            wrongEmailLabel.isHidden = true
+            emailView.wrongEmailLabel.isHidden = true
             textField.layer.borderColor = UIColor.white.cgColor
             textField.layer.cornerRadius = 5
         } else {
-            wrongEmailLabel.isHidden = false
-            wrongEmailLabel.text = "Поле должно содержать - @"
+            emailView.wrongEmailLabel.isHidden = false
+            emailView.wrongEmailLabel.text = "Поле должно содержать - @"
             textField.layer.borderColor = UIColor.red.cgColor
             textField.layer.borderWidth = 3.0
         }
     }
+    
+    
+//    func takeString(textField: UITextField, emailLabel: UILabel, wrongEmailLabel: UILabel) {
+//        if textField.text!.contains("@") {
+//            wrongEmailLabel.isHidden = true
+//            textField.layer.borderColor = UIColor.white.cgColor
+//            textField.layer.cornerRadius = 5
+//        } else {
+//            wrongEmailLabel.isHidden = false
+//            wrongEmailLabel.text = "Поле должно содержать - @"
+//            textField.layer.borderColor = UIColor.red.cgColor
+//            textField.layer.borderWidth = 3.0
+//        }
+//    }
 }
 
 // MARK: - Extension for hidden label setupUI

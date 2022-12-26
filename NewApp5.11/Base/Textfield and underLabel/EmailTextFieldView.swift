@@ -13,18 +13,18 @@ protocol EmailTextFieldDelegate: AnyObject {
 
 class EmailTextFieldView: UIView {
     
-    // MARK: - Outlets
+// MARK: - Outlets
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var wrongEmailLabel: UILabel!
     
-    // MARK: - Public properties
+// MARK: - Public properties
     
     weak var tfDelegate: EmailTextFieldDelegate?
     
-    // MARK: - Init
+// MARK: - Init
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +38,7 @@ class EmailTextFieldView: UIView {
         commonInit()
     }
     
-    // MARK: - Private methods
+// MARK: - Private methods
     
     private func commonInit() {
         Bundle.main.loadNibNamed("EmailTextFieldView", owner: self, options: nil)
@@ -50,7 +50,7 @@ class EmailTextFieldView: UIView {
         emailTextfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
-    // MARK: - Actions
+// MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         tfDelegate?.takeString(textField: textField)

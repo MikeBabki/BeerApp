@@ -17,7 +17,7 @@ public protocol PhoneNumberDelegate: AnyObject {
 
 class PhoneNumberView: UIView {
     
-    // MARK: - Outlets
+// MARK: - Outlets
     
     
     @IBOutlet weak var contentView: UIView!
@@ -25,13 +25,13 @@ class PhoneNumberView: UIView {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var wrongPhoneLabel: UILabel!
     
-    // MARK: - Public properties
+// MARK: - Public properties
     
     var maskedDelegate: MaskedTextFieldDelegate!
     var tfDelegate: PhoneNumberDelegate?
     var phone: String?
     
-    // MARK: - Init
+// MARK: - Init
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,12 +43,12 @@ class PhoneNumberView: UIView {
         super.init(coder: aDecoder)
         
         commonInit()
-        setupUI()
     }
     
-    // MARK: - Private methods
+// MARK: - Private methods
     
     private func commonInit() {
+        setupUI()
         Bundle.main.loadNibNamed("phoneNumberView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
@@ -61,7 +61,7 @@ class PhoneNumberView: UIView {
         phoneTextField.delegate = maskedDelegate
     }
     
-    // MARK: - Actions
+// MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         tfDelegate?.takeString(textField: textField, phoneLabel: phoneLabel, wrongPhoneLabel: wrongPhoneLabel)
