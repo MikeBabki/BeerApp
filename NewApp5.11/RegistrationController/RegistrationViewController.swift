@@ -45,13 +45,14 @@ class RegistrationViewController: UIViewController{
         setupName()
         setupText()
         setupUI()
+        
+
 //        canTapButton()
         
     }
 // MARK:  - Actions
     
     @IBAction func regButtonTapped(_ sender: Any) {
- 
         canRegister()
     }
     
@@ -97,8 +98,7 @@ extension RegistrationViewController: EmailTextFieldDelegate {
         } else {
             emailView.showError()
         }
-//        тернарный
-//        textField.text == "" ? emailView.showError() : emailView.hideError()
+        
     }
 }
 
@@ -154,17 +154,17 @@ extension RegistrationViewController {
     
     func canRegister() {
         //is empty
-        if emailAdress == "" {
-           showAlert(text: "Неправильно заполнена почта")
-        } else if userName == "" {
+        if emailAdress == nil {
+            showAlert(text: "Неверно заполнена почта")
+        } else if userName == nil {
             showAlert(text: "Неверно заполнено имя")
-        } else if userSubName == "" {
+        } else if userSubName == nil {
             showAlert(text: "Неверно заполнена фамилия")
-        } else if userPhone == "" {
+        } else if userPhone == nil {
             showAlert(text: "Неверно заполнен телефон")
-        } else if userPassword == "" {
+        } else if userPassword == nil {
             showAlert(text: "Неверно заполнен пароль")
-        } else if userPassword2 == "" {
+        } else if userPassword2 == nil {
             showAlert(text: "Неверно заполнен пароль")
         } else {
             let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)
