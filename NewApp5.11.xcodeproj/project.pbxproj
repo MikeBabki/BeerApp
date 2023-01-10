@@ -21,7 +21,6 @@
 		DDBC1F3A2950CF4B009118A9 /* PhoneNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */; };
 		DDBC1F3C2950D027009118A9 /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */; };
 		DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */; };
-		DDCEDDC7294355CA004F4D43 /* PasswordTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */; };
 		DDCEDDCD294377AB004F4D43 /* EmailTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */; };
 		DDCEDDCF294377B8004F4D43 /* EmailTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */; };
 		DDE5BE0D293E70C50069B5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE5BE0C293E70C50069B5DE /* AppDelegate.swift */; };
@@ -36,6 +35,8 @@
 		DDF4669C295C3ADF00AE68DF /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF4669B295C3ADF00AE68DF /* UserProfileController.swift */; };
 		DDF4669E295C3AFE00AE68DF /* BeerInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF4669D295C3AFE00AE68DF /* BeerInfoController.swift */; };
 		DDF466A0295C3B1D00AE68DF /* UserNewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF4669F295C3B1D00AE68DF /* UserNewsController.swift */; };
+		ED31518B296D6F4700BCF612 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31518A296D6F4700BCF612 /* Alerts.swift */; };
+		ED31518D296D706E00BCF612 /* PasswordTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED31518C296D706E00BCF612 /* PasswordTextFieldView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +52,6 @@
 		DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberView.xib; sourceTree = "<group>"; };
 		DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
 		DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFiledView.swift; sourceTree = "<group>"; };
-		DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordTextFieldView.xib; sourceTree = "<group>"; };
 		DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextFieldView.swift; sourceTree = "<group>"; };
 		DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailTextFieldView.xib; sourceTree = "<group>"; };
 		DDE5BE09293E70C50069B5DE /* NewApp5.11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp5.11.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +68,8 @@
 		DDF4669B295C3ADF00AE68DF /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		DDF4669D295C3AFE00AE68DF /* BeerInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoController.swift; sourceTree = "<group>"; };
 		DDF4669F295C3B1D00AE68DF /* UserNewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNewsController.swift; sourceTree = "<group>"; };
+		ED31518A296D6F4700BCF612 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		ED31518C296D706E00BCF612 /* PasswordTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordTextFieldView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,61 +85,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD51CD68295C93E600824B22 /* BarInteface */ = {
-			isa = PBXGroup;
-			children = (
-				DDF4669B295C3ADF00AE68DF /* UserProfileController.swift */,
-				DDF4669D295C3AFE00AE68DF /* BeerInfoController.swift */,
-				DDF4669F295C3B1D00AE68DF /* UserNewsController.swift */,
-				DD665294295CC13600BD8F4C /* BeerInfo.storyboard */,
-				DD28EC4E296C877E00E2777A /* BeerCell.xib */,
-				DD28EC53296C8B0500E2777A /* BeerViewCell.swift */,
-				DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */,
-			);
-			path = BarInteface;
-			sourceTree = "<group>";
-		};
 		DD51CD6D295CB9D800824B22 /* NETWORK */ = {
 			isa = PBXGroup;
 			children = (
+				ED2B3041296D6E4100D7817A /* Model */,
 				DD51CD6B295CB8B300824B22 /* NetworkManager.swift */,
-				DD51CD69295CB8A800824B22 /* BeerModel.swift */,
 				DD665292295CBC4700BD8F4C /* Networker.swift */,
 			);
 			path = NETWORK;
 			sourceTree = "<group>";
 		};
-		DD970F1A295079AB00508C72 /* First controller */ = {
+		DD970F1A295079AB00508C72 /* Main Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DDE5BE10293E70C50069B5DE /* ViewController.swift */,
 				DDE5BE12293E70C50069B5DE /* Main.storyboard */,
 			);
-			path = "First controller";
+			path = "Main Controller";
 			sourceTree = "<group>";
 		};
-		DD970F1B295079D400508C72 /* Second Controller */ = {
+		DD970F1B295079D400508C72 /* Login Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DDE5BE22293E75A80069B5DE /* SecondViewController.swift */,
 				DDE5BE20293E759E0069B5DE /* SecondViewController.storyboard */,
 			);
-			path = "Second Controller";
+			path = "Login Controller";
 			sourceTree = "<group>";
 		};
-		DD970F1C29508A9000508C72 /* RegistrationController */ = {
+		DD970F1C29508A9000508C72 /* Registration Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DD970F1D29508AF200508C72 /* RegistrationViewController.swift */,
 				DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */,
 			);
-			path = RegistrationController;
+			path = "Registration Controller";
 			sourceTree = "<group>";
 		};
 		DDCEDDC8294355CF004F4D43 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				DDCEDDCB29437785004F4D43 /* Textfield and underLabel */,
+				ED315189296D6F3500BCF612 /* Extensions */,
+				DDCEDDCB29437785004F4D43 /* Textfield */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -149,6 +138,7 @@
 				DDE5BE1A293E70C70069B5DE /* Info.plist */,
 				DDE5BE0C293E70C50069B5DE /* AppDelegate.swift */,
 				DDE5BE0E293E70C50069B5DE /* SceneDelegate.swift */,
+				DDF46699295C3A8500AE68DF /* TabBarController.swift */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -161,17 +151,14 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		DDCEDDCB29437785004F4D43 /* Textfield and underLabel */ = {
+		DDCEDDCB29437785004F4D43 /* Textfield */ = {
 			isa = PBXGroup;
 			children = (
-				DDCEDDC6294355CA004F4D43 /* PasswordTextFieldView.xib */,
-				DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */,
-				DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */,
-				DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */,
-				DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */,
-				DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */,
+				ED2B3043296D6E7500D7817A /* PasswordTextFiled */,
+				ED315187296D6EB800BCF612 /* EmailTextField */,
+				ED315188296D6EC600BCF612 /* PhoneNumber */,
 			);
-			path = "Textfield and underLabel";
+			path = Textfield;
 			sourceTree = "<group>";
 		};
 		DDE5BE00293E70C50069B5DE = {
@@ -193,10 +180,13 @@
 		DDE5BE0B293E70C50069B5DE /* NewApp5.11 */ = {
 			isa = PBXGroup;
 			children = (
-				DDF466A1295C3B2300AE68DF /* TabBar */,
-				DDF46698295C3A5700AE68DF /* TabBarPapka */,
-				DD970F1B295079D400508C72 /* Second Controller */,
-				DD970F1C29508A9000508C72 /* RegistrationController */,
+				DD51CD6D295CB9D800824B22 /* NETWORK */,
+				DDF4669F295C3B1D00AE68DF /* UserNewsController.swift */,
+				ED2B303F296D6DDF00D7817A /* BeerInfo Controller */,
+				ED2B303E296D6DC700D7817A /* UserProfile Controller */,
+				DD970F1A295079AB00508C72 /* Main Controller */,
+				DD970F1B295079D400508C72 /* Login Controller */,
+				DD970F1C29508A9000508C72 /* Registration Controller */,
 				DDCEDDC8294355CF004F4D43 /* Base */,
 				DDCEDDC9294355E2004F4D43 /* System */,
 				DDCEDDCA29435604004F4D43 /* LaunchScreen */,
@@ -204,22 +194,75 @@
 			path = NewApp5.11;
 			sourceTree = "<group>";
 		};
-		DDF46698295C3A5700AE68DF /* TabBarPapka */ = {
+		ED2B303E296D6DC700D7817A /* UserProfile Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DD51CD68295C93E600824B22 /* BarInteface */,
-				DDF46699295C3A8500AE68DF /* TabBarController.swift */,
-				DD51CD6D295CB9D800824B22 /* NETWORK */,
+				DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */,
+				DDF4669B295C3ADF00AE68DF /* UserProfileController.swift */,
 			);
-			path = TabBarPapka;
+			path = "UserProfile Controller";
 			sourceTree = "<group>";
 		};
-		DDF466A1295C3B2300AE68DF /* TabBar */ = {
+		ED2B303F296D6DDF00D7817A /* BeerInfo Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DD970F1A295079AB00508C72 /* First controller */,
+				ED2B3040296D6DEF00D7817A /* View */,
+				DD665294295CC13600BD8F4C /* BeerInfo.storyboard */,
+				DDF4669D295C3AFE00AE68DF /* BeerInfoController.swift */,
 			);
-			path = TabBar;
+			path = "BeerInfo Controller";
+			sourceTree = "<group>";
+		};
+		ED2B3040296D6DEF00D7817A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD28EC4E296C877E00E2777A /* BeerCell.xib */,
+				DD28EC53296C8B0500E2777A /* BeerViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED2B3041296D6E4100D7817A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD51CD69295CB8A800824B22 /* BeerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED2B3043296D6E7500D7817A /* PasswordTextFiled */ = {
+			isa = PBXGroup;
+			children = (
+				ED31518C296D706E00BCF612 /* PasswordTextFieldView.xib */,
+				DDCEDDC4294355A0004F4D43 /* PasswordTextFiledView.swift */,
+			);
+			path = PasswordTextFiled;
+			sourceTree = "<group>";
+		};
+		ED315187296D6EB800BCF612 /* EmailTextField */ = {
+			isa = PBXGroup;
+			children = (
+				DDCEDDCE294377B8004F4D43 /* EmailTextFieldView.xib */,
+				DDCEDDCC294377AB004F4D43 /* EmailTextFieldView.swift */,
+			);
+			path = EmailTextField;
+			sourceTree = "<group>";
+		};
+		ED315188296D6EC600BCF612 /* PhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */,
+				DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */,
+			);
+			path = PhoneNumber;
+			sourceTree = "<group>";
+		};
+		ED315189296D6F3500BCF612 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED31518A296D6F4700BCF612 /* Alerts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +341,7 @@
 				DDE5BE16293E70C70069B5DE /* Assets.xcassets in Resources */,
 				DDE5BE14293E70C50069B5DE /* Main.storyboard in Resources */,
 				DDBC1F382950BE7E009118A9 /* RegistrationViewController.storyboard in Resources */,
-				DDCEDDC7294355CA004F4D43 /* PasswordTextFieldView.xib in Resources */,
+				ED31518D296D706E00BCF612 /* PasswordTextFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +362,7 @@
 				DD51CD6A295CB8A800824B22 /* BeerModel.swift in Sources */,
 				DDF4669C295C3ADF00AE68DF /* UserProfileController.swift in Sources */,
 				DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */,
+				ED31518B296D6F4700BCF612 /* Alerts.swift in Sources */,
 				DDF466A0295C3B1D00AE68DF /* UserNewsController.swift in Sources */,
 				DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */,
 				DD51CD6C295CB8B300824B22 /* NetworkManager.swift in Sources */,

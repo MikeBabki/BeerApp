@@ -28,7 +28,6 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         initializeSetup()
         setupUI()
         setupText()
-        
     }
     
     @IBAction func registrationButtonAction(_ sender: Any) {
@@ -42,43 +41,19 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButtoAction(_ sender: Any) {
-
-        if passwordView.wrongPasswordLabel.isHidden && emailView.wrongEmailLabel.isHidden{
-                
-                let vc = TabBarConroller()
-                vc.navigationItem.setHidesBackButton(true, animated: true)
-                navigationController?.pushViewController(vc, animated: true)
-            
-        }else if passwordView.wrongPasswordLabel.isHidden == false && emailView.wrongEmailLabel.isHidden == false  {
-            let alert = UIAlertController(title: "Вы не заполнили оба поля", message: nil, preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-             
-            }))
-             
-            self.present(alert, animated: true)
-            
-        }else if emailView.wrongEmailLabel.isHidden == false{
-            let alert = UIAlertController(title: "Вы некорректно заполнили логин", message: nil, preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-             
-            }))
-             
-            self.present(alert, animated: true)
-            
-        }else  {
-            
-            let alert = UIAlertController(title: "Вы некорректно заполнили пароль", message: nil, preferredStyle: .alert)
-             
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-             
-            }))
-             
-            self.present(alert, animated: true)
+        
+        if passwordView.wrongPasswordLabel.isHidden && emailView.wrongEmailLabel.isHidden {
+            let vc = TabBarConroller()
+            vc.navigationItem.setHidesBackButton(true, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
+        } else if passwordView.wrongPasswordLabel.isHidden == false && emailView.wrongEmailLabel.isHidden == false {
+            showAlert(text: "Вы не заполнили оба поля")
+        } else if emailView.wrongEmailLabel.isHidden == false {
+            showAlert(text: "Вы некорректно заполнили логин")
+        } else {
+            showAlert(text: "Вы некорректно заполнили пароль")
         }
     }
-    
     
     // MARK: - Private methods
     

@@ -9,7 +9,7 @@ import UIKit
 
 class RegistrationViewController: UIViewController{
     
-// MARK: - Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var buttonConentView: UIView!
     @IBOutlet weak var regButton: UIButton!
@@ -28,6 +28,8 @@ class RegistrationViewController: UIViewController{
     @IBOutlet weak var secondPasswordView: PasswordTextFiledView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    // MARK: - Private properties
+    
     private var emailAdress: String?
     private var userName: String?
     private var userSubName: String?
@@ -36,7 +38,7 @@ class RegistrationViewController: UIViewController{
     private var userPassword2: String?
     
     
-// MARK: - Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,42 +47,40 @@ class RegistrationViewController: UIViewController{
         setupName()
         setupText()
         setupUI()
-        
-
-//        canTapButton()
-        
     }
-// MARK:  - Actions
+    
+    // MARK:  - Actions
     
     @IBAction func regButtonTapped(_ sender: Any) {
         canRegister()
-
-       
     }
     
-    
-// MARK: - Private methods
+    // MARK: - Private methods
     
     private func initializeSetup() {
         phoneNumberView.tfDelegate = self
         emailView.tfDelegate = self
         passwordView.tfDelegate = self
+        secondPasswordView.tfDelegate = self
         nameTextField.delegate = self
         subNameTextField.delegate = self
     }
 }
-// MARK: - Extension for SecondViewController
+
+    // MARK: - Extension for SecondViewController
 
 extension RegistrationViewController {
     
     func setupText() {
-        
         regButton.setTitle("Register", for: .normal)
         regButton.layer.cornerRadius = 20
         regButton.backgroundColor = .systemPink
         regButton.setTitleColor(.black, for: .normal)
     }
 }
+
+// MARK: - Extension for UI
+
 extension RegistrationViewController {
     
     func setupUI() {
@@ -89,7 +89,7 @@ extension RegistrationViewController {
         buttonConentView.layer.opacity = 20
     }
 }
-// MARK: - Extension for textField delegate
+// MARK: - Extension for Email TextField delegate
     
 extension RegistrationViewController: EmailTextFieldDelegate {
     func takeString(textField: UITextField) {
@@ -106,6 +106,8 @@ extension RegistrationViewController: EmailTextFieldDelegate {
     }
 }
 
+// MARK: - Extension for Phone Number delegate
+
 extension RegistrationViewController: PhoneNumberDelegate {
     func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
         
@@ -119,42 +121,30 @@ extension RegistrationViewController: PhoneNumberDelegate {
     }
 }
 
+// MARK: - Extension for Password TextField delegate
+
 extension RegistrationViewController: PasswordTextFieldDelegate {
     
     func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
         
-//        if textField.text!.count >= 6 {
-//            passwordView.hideError()
-//            if textField == passwordView.passwordTextField {
-//                userPassword = textField.text
-//                UserDefaults.standard.set(textField.text, forKey: "password")
-//                UserDefaults.standard.synchronize()
-//                let password = UserDefaults.standard.string(forKey: "password") ?? ""
-//                print(password)
-//            } else {
-//                userPassword2 = textField.text
-//                print(userPassword2)
-//            }
-//        } else {
-//            passwordView.showError()
-//        }
-        
         if textField.text!.count >= 6 {
             passwordView.hideError()
-            if textField == secondPasswordView.passwordTextField {
+            if textField == passwordView.passwordTextField {
                 userPassword = textField.text
-                print(userPassword)
-                
-            } else {
-                print("op")
+                UserDefaults.standard.set(textField.text, forKey: "password")
+                UserDefaults.standard.synchronize()
+                let password = UserDefaults.standard.string(forKey: "password") ?? ""
+                print(password)
+            } else if textField == secondPasswordView.passwordTextField{
+                userPassword2 = textField.text
+                print(userPassword2)
             }
+        } else {
+            passwordView.showError()
         }
     }
 }
-//UserDefaults.standard.set(textField.text, forKey: "password")
-//UserDefaults.standard.synchronize()
-//let password = UserDefaults.standard.string(forKey: "password") ?? ""
-//print(password)
+
 // MARK: - Extension for name and subname
 
 extension RegistrationViewController {
@@ -166,6 +156,8 @@ extension RegistrationViewController {
         wrongSunName.text = ""
     }
 }
+
+// MARK: - Extension for textField delegate
 
 extension RegistrationViewController: UITextFieldDelegate {
     
@@ -181,6 +173,7 @@ extension RegistrationViewController: UITextFieldDelegate {
         }
     }
 }
+
 extension RegistrationViewController {
     
     func canRegister() {
@@ -205,17 +198,6 @@ extension RegistrationViewController {
                 vc.navigationItem.setHidesBackButton(true, animated: true)
                 navigationController?.pushViewController(vc, animated: true)
         }
-    }
-}
-extension RegistrationViewController {
-    func showAlert(text: String) {
-        let alert = UIAlertController(title: text, message: nil, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-         
-        }))
-         
-        self.present(alert, animated: true)
     }
 }
 

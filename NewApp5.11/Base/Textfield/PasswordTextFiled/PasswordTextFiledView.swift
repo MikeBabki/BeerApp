@@ -26,18 +26,19 @@ class PasswordTextFiledView: UIView {
     var tfDelegate: PasswordTextFieldDelegate?
     
     // MARK: - Private methods
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         
-        public override init(frame: CGRect) {
-            super.init(frame: frame)
-            
-            commonInit()
-        }
-            
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-            
-            commonInit()
-        }
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        commonInit()
+    }
+    
     func showError() {
         wrongPasswordLabel.isHidden = false
         wrongPasswordLabel.text = "Поле должно содержать минимум 6 символов"
@@ -50,6 +51,7 @@ class PasswordTextFiledView: UIView {
         passwordTextField.layer.borderColor = UIColor.white.cgColor
         passwordTextField.layer.cornerRadius = 5
     }
+    
     // MARK: - Private methods
     
     private func commonInit() {
@@ -62,26 +64,28 @@ class PasswordTextFiledView: UIView {
         setupText()
         setupUI()
     }
-        
+    
     // MARK: - Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
-       
+        
         tfDelegate?.take(textField: textField, mainLabel: passwordLabel, errorLabel: wrongPasswordLabel)
-       
+        
     }
+    
     @objc func showTextButtonTapped(_ sender: UIButton) {
         sender.setImage((passwordTextField.isSecureTextEntry ? UIImage(systemName: "eye") : UIImage(systemName: "eye.slash.fill"))?.withRenderingMode(.alwaysTemplate), for: .normal)
-            passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
+    
     // MARK: - Private methods
     
     private func configureShowTextButton() {
-            let showTextButton = UIButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+        let showTextButton = UIButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
         showTextButton.setImage((passwordTextField.isSecureTextEntry ? UIImage(systemName: "eye.slash.fill") : UIImage(systemName: "eye.slash.fill"))?.withRenderingMode(.alwaysTemplate), for: .normal)
         
-            showTextButton.tintColor = .darkGray
-            showTextButton.addTarget(self, action: #selector(showTextButtonTapped), for: .touchUpInside)
+        showTextButton.tintColor = .darkGray
+        showTextButton.addTarget(self, action: #selector(showTextButtonTapped), for: .touchUpInside)
         passwordTextField.rightView = showTextButton
         passwordTextField.rightViewMode = .always
     }

@@ -11,7 +11,7 @@ class NetworkManager {
     
     func getResult(page: Int, perPage: Int,completion: @escaping(Result<[BeerModel], Error>) -> Void) {
     
-        var urlString = URLManage.beerURLCreator(page: page, perPage: perPage)
+        var urlString = URLManager.beerURLCreator(page: page, perPage: perPage)
         var url = URL(string: urlString)
         URLSession.shared.dataTask(with: url!) { data, _, error in
             guard let data = data else {

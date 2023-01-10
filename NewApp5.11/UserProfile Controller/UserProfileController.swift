@@ -12,11 +12,5 @@ class UserProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
-        
-        
-        
-        
-        
     }
 }

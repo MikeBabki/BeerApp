@@ -9,12 +9,19 @@ import UIKit
 
 class BeerInfoController: UIViewController {
     
-    var massive = [BeerModel]()
-    var pageNumber = 1
-    var elementCount = 50
-    var networkEkz = NetworkManager()
+    // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Private properties
+    
+    private var massive = [BeerModel]()
+    private var pageNumber = 1
+    private var elementCount = 50
+    private var networkEkz = NetworkManager()
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBeers()
@@ -23,9 +30,10 @@ class BeerInfoController: UIViewController {
         self.title = "Beer Collection"
         let nib = UINib(nibName: "BeerCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "beerCelId")
-        
-
     }
+    
+    // MARK: - Actions
+    
     @objc func loadBeers() {
         networkEkz.getResult(page: pageNumber, perPage: elementCount) { networkInfo in
             switch networkInfo {
@@ -36,11 +44,11 @@ class BeerInfoController: UIViewController {
                 }
             case .failure(let error):
                 print("Hop")
-                
             }
         }
     }
 }
+
 extension BeerInfoController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "beerCelId", for: indexPath) as! BeerViewCell
@@ -49,14 +57,6 @@ extension BeerInfoController: UITableViewDataSource{
         cell.configure(withModel: model)
         
         return cell
-        
-//        let beeer = massive[indexPath.row]
-//
-//        cell.beerName?.text = beeer.name
-//        cell.beerDescription?.text = beeer.description
-//        cell.beerVolume?.text = String(beeer.volume.value)
-////        cell.beerImage?.image = UIImage(beeer.image_url)
-//        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
