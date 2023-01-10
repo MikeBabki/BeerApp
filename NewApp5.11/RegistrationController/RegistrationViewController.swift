@@ -54,6 +54,8 @@ class RegistrationViewController: UIViewController{
     
     @IBAction func regButtonTapped(_ sender: Any) {
         canRegister()
+
+       
     }
     
     
@@ -95,6 +97,8 @@ extension RegistrationViewController: EmailTextFieldDelegate {
         if textField.text!.contains("@") {
             emailView.hideError()
             emailAdress = textField.text
+            UserDefaults.standard.set(textField.text, forKey: "email")
+            UserDefaults.standard.synchronize()
         } else {
             emailView.showError()
         }
@@ -106,6 +110,8 @@ extension RegistrationViewController: PhoneNumberDelegate {
     func textField(_ textField: UITextField, didFillMandatoryCharacters complete: Bool, didExtractValue value: String) {
         
         userPhone = textField.text
+        UserDefaults.standard.set(textField.text, forKey: "phoneNumber")
+        UserDefaults.standard.synchronize()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -116,18 +122,39 @@ extension RegistrationViewController: PhoneNumberDelegate {
 extension RegistrationViewController: PasswordTextFieldDelegate {
     
     func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
+        
+//        if textField.text!.count >= 6 {
+//            passwordView.hideError()
+//            if textField == passwordView.passwordTextField {
+//                userPassword = textField.text
+//                UserDefaults.standard.set(textField.text, forKey: "password")
+//                UserDefaults.standard.synchronize()
+//                let password = UserDefaults.standard.string(forKey: "password") ?? ""
+//                print(password)
+//            } else {
+//                userPassword2 = textField.text
+//                print(userPassword2)
+//            }
+//        } else {
+//            passwordView.showError()
+//        }
+        
         if textField.text!.count >= 6 {
             passwordView.hideError()
-            if textField == passwordView.passwordTextField {
+            if textField == secondPasswordView.passwordTextField {
                 userPassword = textField.text
+                print(userPassword)
+                
             } else {
-                userPassword2 = textField.text
+                print("op")
             }
-        } else {
-            passwordView.showError()
         }
     }
 }
+//UserDefaults.standard.set(textField.text, forKey: "password")
+//UserDefaults.standard.synchronize()
+//let password = UserDefaults.standard.string(forKey: "password") ?? ""
+//print(password)
 // MARK: - Extension for name and subname
 
 extension RegistrationViewController {
@@ -145,8 +172,12 @@ extension RegistrationViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         if textField == nameTextField {
             userName = textField.text
+            UserDefaults.standard.set(textField.text, forKey: "name")
+            UserDefaults.standard.synchronize()
         } else {
             userSubName = textField.text
+            UserDefaults.standard.set(textField.text, forKey: "subName")
+            UserDefaults.standard.synchronize()
         }
     }
 }
@@ -163,9 +194,9 @@ extension RegistrationViewController {
         } else if userPhone == nil {
             showAlert(text: "Неверно заполнен телефон")
         } else if userPassword == nil {
-            showAlert(text: "Неверно заполнен пароль")
+            showAlert(text: "Неверно заполнен парольSSA")
         } else if userPassword2 == nil {
-            showAlert(text: "Неверно заполнен пароль")
+            showAlert(text: "Неверно заполнен парольA")
         } else {
             let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
@@ -187,3 +218,4 @@ extension RegistrationViewController {
         self.present(alert, animated: true)
     }
 }
+

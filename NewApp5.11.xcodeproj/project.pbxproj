@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD28EC4F296C877E00E2777A /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD28EC4E296C877E00E2777A /* BeerCell.xib */; };
+		DD28EC52296C889F00E2777A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD28EC51296C889F00E2777A /* Kingfisher */; };
+		DD28EC54296C8B0500E2777A /* BeerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EC53296C8B0500E2777A /* BeerViewCell.swift */; };
 		DD51CD6A295CB8A800824B22 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51CD69295CB8A800824B22 /* BeerModel.swift */; };
 		DD51CD6C295CB8B300824B22 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51CD6B295CB8B300824B22 /* NetworkManager.swift */; };
 		DD665293295CBC4700BD8F4C /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD665292295CBC4700BD8F4C /* Networker.swift */; };
 		DD665295295CC13600BD8F4C /* BeerInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD665294295CC13600BD8F4C /* BeerInfo.storyboard */; };
+		DD7D9F1D296C267500AE6B2C /* ProfileInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */; };
 		DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD970F1D29508AF200508C72 /* RegistrationViewController.swift */; };
 		DDA1CC172953836000972EF7 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = DDA1CC162953836000972EF7 /* InputMask */; };
 		DDBC1F382950BE7E009118A9 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */; };
@@ -35,10 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD28EC4E296C877E00E2777A /* BeerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCell.xib; sourceTree = "<group>"; };
+		DD28EC53296C8B0500E2777A /* BeerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewCell.swift; sourceTree = "<group>"; };
 		DD51CD69295CB8A800824B22 /* BeerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerModel.swift; sourceTree = "<group>"; };
 		DD51CD6B295CB8B300824B22 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DD665292295CBC4700BD8F4C /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		DD665294295CC13600BD8F4C /* BeerInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerInfo.storyboard; sourceTree = "<group>"; };
+		DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileInfo.storyboard; sourceTree = "<group>"; };
 		DD970F1D29508AF200508C72 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberView.xib; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD28EC52296C889F00E2777A /* Kingfisher in Frameworks */,
 				DDA1CC172953836000972EF7 /* InputMask in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +90,9 @@
 				DDF4669D295C3AFE00AE68DF /* BeerInfoController.swift */,
 				DDF4669F295C3B1D00AE68DF /* UserNewsController.swift */,
 				DD665294295CC13600BD8F4C /* BeerInfo.storyboard */,
+				DD28EC4E296C877E00E2777A /* BeerCell.xib */,
+				DD28EC53296C8B0500E2777A /* BeerViewCell.swift */,
+				DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */,
 			);
 			path = BarInteface;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 			name = NewApp5.11;
 			packageProductDependencies = (
 				DDA1CC162953836000972EF7 /* InputMask */,
+				DD28EC51296C889F00E2777A /* Kingfisher */,
 			);
 			productName = NewApp5.11;
 			productReference = DDE5BE09293E70C50069B5DE /* NewApp5.11.app */;
@@ -260,6 +272,7 @@
 			mainGroup = DDE5BE00293E70C50069B5DE;
 			packageReferences = (
 				DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
+				DD28EC50296C889F00E2777A /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DDE5BE0A293E70C50069B5DE /* Products */;
 			projectDirPath = "";
@@ -275,11 +288,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD7D9F1D296C267500AE6B2C /* ProfileInfo.storyboard in Resources */,
 				DDE5BE19293E70C70069B5DE /* LaunchScreen.storyboard in Resources */,
 				DD665295295CC13600BD8F4C /* BeerInfo.storyboard in Resources */,
 				DDCEDDCF294377B8004F4D43 /* EmailTextFieldView.xib in Resources */,
 				DDBC1F3A2950CF4B009118A9 /* PhoneNumberView.xib in Resources */,
 				DDE5BE21293E759E0069B5DE /* SecondViewController.storyboard in Resources */,
+				DD28EC4F296C877E00E2777A /* BeerCell.xib in Resources */,
 				DDE5BE16293E70C70069B5DE /* Assets.xcassets in Resources */,
 				DDE5BE14293E70C50069B5DE /* Main.storyboard in Resources */,
 				DDBC1F382950BE7E009118A9 /* RegistrationViewController.storyboard in Resources */,
@@ -300,6 +315,7 @@
 				DDF4669A295C3A8500AE68DF /* TabBarController.swift in Sources */,
 				DDE5BE11293E70C50069B5DE /* ViewController.swift in Sources */,
 				DD665293295CBC4700BD8F4C /* Networker.swift in Sources */,
+				DD28EC54296C8B0500E2777A /* BeerViewCell.swift in Sources */,
 				DD51CD6A295CB8A800824B22 /* BeerModel.swift in Sources */,
 				DDF4669C295C3ADF00AE68DF /* UserProfileController.swift in Sources */,
 				DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */,
@@ -528,6 +544,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DD28EC50296C889F00E2777A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RedMadRobot/input-mask-ios.git";
@@ -539,6 +563,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DD28EC51296C889F00E2777A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD28EC50296C889F00E2777A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		DDA1CC162953836000972EF7 /* InputMask */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */;

@@ -20,7 +20,9 @@ class BeerInfoController: UIViewController {
         loadBeers()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.title = "Beer Collection"
+        let nib = UINib(nibName: "BeerCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "beerCelId")
         
 
     }
@@ -41,15 +43,24 @@ class BeerInfoController: UIViewController {
 }
 extension BeerInfoController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-            return UITableViewCell()
-        }
-        cell.textLabel?.text = self.massive[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "beerCelId", for: indexPath) as! BeerViewCell
+        
+        let model = massive[indexPath.row]
+        cell.configure(withModel: model)
         
         return cell
+        
+//        let beeer = massive[indexPath.row]
+//
+//        cell.beerName?.text = beeer.name
+//        cell.beerDescription?.text = beeer.description
+//        cell.beerVolume?.text = String(beeer.volume.value)
+////        cell.beerImage?.image = UIImage(beeer.image_url)
+//        return cell
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return massive.count
+        massive.count
     }
 }
 

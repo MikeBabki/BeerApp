@@ -93,7 +93,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 extension SecondViewController {
     
     func setupText() {
-        
+        let emailProfile = UserDefaults.standard.string(forKey: "password") ?? ""
+        if emailProfile == "" {
+            emailView.emailTextfield.placeholder = "enter your email"
+        } else {
+            emailView.emailTextfield.text = emailProfile
+        }
         createANewButton.setTitle("CREATE A NEW ACCOUNT", for: .normal)
         createANewButton.setTitleColor(.white, for: .normal)
         
