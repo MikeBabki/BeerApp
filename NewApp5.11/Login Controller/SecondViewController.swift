@@ -35,7 +35,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         let storyboard = UIStoryboard(name: "RegistrationViewController", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
             
-            let backItem = UIBarButtonItem(title: "dddd", style: .bordered, target: nil, action: nil)
+            let backItem = UIBarButtonItem(title: "Back", style: .bordered, target: nil, action: nil)
             navigationItem.backBarButtonItem = backItem
             navigationController?.pushViewController(vc, animated: true)
     }
@@ -68,11 +68,17 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 extension SecondViewController {
     
     func setupText() {
-        let emailProfile = UserDefaults.standard.string(forKey: "password") ?? ""
+        let emailProfile = UserDefaults.standard.string(forKey: "email") ?? ""
         if emailProfile == "" {
             emailView.emailTextfield.placeholder = "enter your email"
         } else {
             emailView.emailTextfield.text = emailProfile
+        }
+        let passwordProfile = UserDefaults.standard.string(forKey: "password") ?? ""
+        if passwordProfile == "" {
+            passwordView.passwordTextField.placeholder = "enter your password"
+        }else {
+            passwordView.passwordTextField.text = passwordProfile
         }
         createANewButton.setTitle("CREATE A NEW ACCOUNT", for: .normal)
         createANewButton.setTitleColor(.white, for: .normal)

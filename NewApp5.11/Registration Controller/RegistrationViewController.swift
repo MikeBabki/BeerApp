@@ -52,7 +52,11 @@ class RegistrationViewController: UIViewController{
     // MARK:  - Actions
     
     @IBAction func regButtonTapped(_ sender: Any) {
+        if userPassword != userPassword2 {
+            showAlert(text: "Пароли не совпадают")
+        }
         canRegister()
+       
     }
     
     // MARK: - Private methods
@@ -125,7 +129,8 @@ extension RegistrationViewController: PhoneNumberDelegate {
 
 extension RegistrationViewController: PasswordTextFieldDelegate {
     
-    func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) {
+    func take(textField: UITextField, mainLabel: UILabel, errorLabel: UILabel) { //tut
+     
         
         if textField.text!.count >= 6 {
             passwordView.hideError()
@@ -133,11 +138,8 @@ extension RegistrationViewController: PasswordTextFieldDelegate {
                 userPassword = textField.text
                 UserDefaults.standard.set(textField.text, forKey: "password")
                 UserDefaults.standard.synchronize()
-                let password = UserDefaults.standard.string(forKey: "password") ?? ""
-                print(password)
             } else if textField == secondPasswordView.passwordTextField{
                 userPassword2 = textField.text
-                print(userPassword2)
             }
         } else {
             passwordView.showError()
@@ -194,7 +196,7 @@ extension RegistrationViewController {
             let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
                 
-                let backItem = UIBarButtonItem(title: "dddd", style: .bordered, target: nil, action: nil)
+                let backItem = UIBarButtonItem(title: "Back", style: .bordered, target: nil, action: nil)
                 vc.navigationItem.setHidesBackButton(true, animated: true)
                 navigationController?.pushViewController(vc, animated: true)
         }

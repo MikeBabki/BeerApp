@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beer Description View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BeerDescript" id="Y6W-OH-hqX" customClass="BeerDescriptionViewController" customModule="NewApp5_11" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ut-vh-pXY">
+                                <rect key="frame" x="107" y="205" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BgV-o9-Ayz"/>
+                                    <constraint firstAttribute="height" constant="200" id="jg1-pq-k4e"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zyd-Nz-SbV">
+                                <rect key="frame" x="16" y="463" width="382" height="399"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHV-1G-58p">
+                                <rect key="frame" x="171.5" y="140" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zyd-Nz-SbV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1J0-qF-mC3"/>
+                            <constraint firstItem="KHV-1G-58p" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="R2E-ub-ny4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Zyd-Nz-SbV" secondAttribute="bottom" id="TOS-X6-cQk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Zyd-Nz-SbV" secondAttribute="trailing" constant="16" id="Z7c-bC-unw"/>
+                            <constraint firstItem="Zyd-Nz-SbV" firstAttribute="top" secondItem="4Ut-vh-pXY" secondAttribute="bottom" constant="58" id="efy-bP-c0s"/>
+                            <constraint firstItem="Zyd-Nz-SbV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ltf-Nx-hwa"/>
+                            <constraint firstItem="4Ut-vh-pXY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pQX-2n-CeC"/>
+                            <constraint firstItem="KHV-1G-58p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="96" id="v1y-MC-MPz"/>
+                            <constraint firstItem="4Ut-vh-pXY" firstAttribute="top" secondItem="KHV-1G-58p" secondAttribute="bottom" constant="29" id="xQ8-NM-Joi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beerImage" destination="4Ut-vh-pXY" id="sFn-EU-sG9"/>
+                        <outlet property="beerNameLabel" destination="KHV-1G-58p" id="2j4-XM-add"/>
+                        <outlet property="ingridientsTableView" destination="Zyd-Nz-SbV" id="oBI-pD-70v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="64.955357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

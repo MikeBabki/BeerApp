@@ -16,6 +16,10 @@
 		DD665295295CC13600BD8F4C /* BeerInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD665294295CC13600BD8F4C /* BeerInfo.storyboard */; };
 		DD7D9F1D296C267500AE6B2C /* ProfileInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */; };
 		DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD970F1D29508AF200508C72 /* RegistrationViewController.swift */; };
+		DD9E40D1296F2DA50097D7B6 /* BeerDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E40D0296F2DA50097D7B6 /* BeerDescriptionViewController.swift */; };
+		DD9E40D3296F2DBA0097D7B6 /* BeerDescriptionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9E40D2296F2DBA0097D7B6 /* BeerDescriptionStoryboard.storyboard */; };
+		DD9E40D6296F3F950097D7B6 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E40D5296F3F950097D7B6 /* BeerTableViewCell.swift */; };
+		DD9E40DC296F46F50097D7B6 /* BeerkaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9E40DA296F46F50097D7B6 /* BeerkaViewCell.xib */; };
 		DDA1CC172953836000972EF7 /* InputMask in Frameworks */ = {isa = PBXBuildFile; productRef = DDA1CC162953836000972EF7 /* InputMask */; };
 		DDBC1F382950BE7E009118A9 /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */; };
 		DDBC1F3A2950CF4B009118A9 /* PhoneNumberView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */; };
@@ -48,6 +52,10 @@
 		DD665294295CC13600BD8F4C /* BeerInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerInfo.storyboard; sourceTree = "<group>"; };
 		DD7D9F1C296C267500AE6B2C /* ProfileInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileInfo.storyboard; sourceTree = "<group>"; };
 		DD970F1D29508AF200508C72 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		DD9E40D0296F2DA50097D7B6 /* BeerDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDescriptionViewController.swift; sourceTree = "<group>"; };
+		DD9E40D2296F2DBA0097D7B6 /* BeerDescriptionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeerDescriptionStoryboard.storyboard; sourceTree = "<group>"; };
+		DD9E40D5296F3F950097D7B6 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
+		DD9E40DA296F46F50097D7B6 /* BeerkaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerkaViewCell.xib; sourceTree = "<group>"; };
 		DDBC1F372950BE7E009118A9 /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		DDBC1F392950CF4B009118A9 /* PhoneNumberView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneNumberView.xib; sourceTree = "<group>"; };
 		DDBC1F3B2950D027009118A9 /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
@@ -122,6 +130,25 @@
 			path = "Registration Controller";
 			sourceTree = "<group>";
 		};
+		DD9E40CF296F2D630097D7B6 /* BeerDescription */ = {
+			isa = PBXGroup;
+			children = (
+				DD9E40D4296F3F660097D7B6 /* View */,
+				DD9E40D0296F2DA50097D7B6 /* BeerDescriptionViewController.swift */,
+				DD9E40D2296F2DBA0097D7B6 /* BeerDescriptionStoryboard.storyboard */,
+			);
+			path = BeerDescription;
+			sourceTree = "<group>";
+		};
+		DD9E40D4296F3F660097D7B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD9E40D5296F3F950097D7B6 /* BeerTableViewCell.swift */,
+				DD9E40DA296F46F50097D7B6 /* BeerkaViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DDCEDDC8294355CF004F4D43 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +207,7 @@
 		DDE5BE0B293E70C50069B5DE /* NewApp5.11 */ = {
 			isa = PBXGroup;
 			children = (
+				DD9E40CF296F2D630097D7B6 /* BeerDescription */,
 				DD51CD6D295CB9D800824B22 /* NETWORK */,
 				DDF4669F295C3B1D00AE68DF /* UserNewsController.swift */,
 				ED2B303F296D6DDF00D7817A /* BeerInfo Controller */,
@@ -335,8 +363,10 @@
 				DDE5BE19293E70C70069B5DE /* LaunchScreen.storyboard in Resources */,
 				DD665295295CC13600BD8F4C /* BeerInfo.storyboard in Resources */,
 				DDCEDDCF294377B8004F4D43 /* EmailTextFieldView.xib in Resources */,
+				DD9E40DC296F46F50097D7B6 /* BeerkaViewCell.xib in Resources */,
 				DDBC1F3A2950CF4B009118A9 /* PhoneNumberView.xib in Resources */,
 				DDE5BE21293E759E0069B5DE /* SecondViewController.storyboard in Resources */,
+				DD9E40D3296F2DBA0097D7B6 /* BeerDescriptionStoryboard.storyboard in Resources */,
 				DD28EC4F296C877E00E2777A /* BeerCell.xib in Resources */,
 				DDE5BE16293E70C70069B5DE /* Assets.xcassets in Resources */,
 				DDE5BE14293E70C50069B5DE /* Main.storyboard in Resources */,
@@ -361,11 +391,13 @@
 				DD28EC54296C8B0500E2777A /* BeerViewCell.swift in Sources */,
 				DD51CD6A295CB8A800824B22 /* BeerModel.swift in Sources */,
 				DDF4669C295C3ADF00AE68DF /* UserProfileController.swift in Sources */,
+				DD9E40D1296F2DA50097D7B6 /* BeerDescriptionViewController.swift in Sources */,
 				DDCEDDC5294355A0004F4D43 /* PasswordTextFiledView.swift in Sources */,
 				ED31518B296D6F4700BCF612 /* Alerts.swift in Sources */,
 				DDF466A0295C3B1D00AE68DF /* UserNewsController.swift in Sources */,
 				DD970F1F29508AF200508C72 /* RegistrationViewController.swift in Sources */,
 				DD51CD6C295CB8B300824B22 /* NetworkManager.swift in Sources */,
+				DD9E40D6296F3F950097D7B6 /* BeerTableViewCell.swift in Sources */,
 				DDE5BE0D293E70C50069B5DE /* AppDelegate.swift in Sources */,
 				DDBC1F3C2950D027009118A9 /* PhoneNumberView.swift in Sources */,
 				DDE5BE0F293E70C50069B5DE /* SceneDelegate.swift in Sources */,

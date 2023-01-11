@@ -11,19 +11,22 @@ class TabBarConroller: UITabBarController {
    
     override func viewDidLoad() {
             super.viewDidLoad()
-        
     
             view.backgroundColor = .systemYellow
             
-        let storyboard = UIStoryboard(name: "BeerInfo", bundle: nil)
+            let storyboard = UIStoryboard(name: "BeerInfo", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "BeerInfoController") as! BeerInfoController
-        vc.title = "Beer Collection"
-            let backItem = UIBarButtonItem(title: "dddd", style: .bordered, target: nil, action: nil)
+            vc.title = "Beer Collection"
+            let backItem = UIBarButtonItem(title: "Back", style: .bordered, target: nil, action: nil)
             navigationItem.backBarButtonItem = backItem
-//            navigationController?.pushViewController(vc, animated: true)
-//            let vc1 = UINavigationController(rootViewController: BeerInfoController())
+        
+            
+        
             let vc2 = UINavigationController(rootViewController: UserNewsController())
-            let vc3 = UINavigationController(rootViewController: UserProfileController())
+        
+            let storyboard2 = UIStoryboard(name: "ProfileInfo", bundle: nil)
+            let vc3 = storyboard2.instantiateViewController(withIdentifier: "ProfileID") as! UserProfileController
+            
             
             vc.tabBarItem.image = UIImage(systemName: "house")
             vc2.tabBarItem.image = UIImage(systemName: "play.circle")

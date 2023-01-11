@@ -66,5 +66,18 @@ extension BeerInfoController: UITableViewDataSource{
 
 extension BeerInfoController: UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "BeerDescriptionStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "BeerDescript") as! BeerDescriptionViewController
+        
+        var nameItem = massive[indexPath.row]
+        vc.imageForBeer = nameItem.image_url
+        vc.nameOfBeer = nameItem.name
+        vc.massive = nameItem.ingredients.malt
+        
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
 }

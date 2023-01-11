@@ -19,27 +19,26 @@ class BeerViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    
-
+        setupUI()
     }
-            func configure(withModel model: BeerModel) {
+    func configure(withModel model: BeerModel) {
     
-                self.model = model
+    self.model = model
     
-                beerName.text = model.name
-                beerDescription.text = model.description
-                beerVolume.text = String(model.volume.value)
+    beerName.text = model.name
+    beerDescription.text = model.description
+    beerVolume.text = String(model.volume.value)
     
-                beerImage.kf.setImage(with: URL(string: model.image_url ?? ""), completionHandler:  { [weak self] result in
-                            guard let self = self else { return }
-                            switch result {
-                            case .success(let value):
+    beerImage.kf.setImage(with: URL(string: model.image_url ?? ""), completionHandler:  { [weak self] result in
+    guard let self = self else { return }
+        switch result {
+                case .success(let value):
                                 self.beerImage.image = value.image
-                            case .failure(_):
+                case .failure(_):
                                 self.beerImage.image = UIImage(systemName: "person.crop.circle.badge.exclamationmark")
-                            }
-                        })
-            }
+                }
+            })
+}
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -47,4 +46,22 @@ class BeerViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension BeerViewCell {
+    
+    func setupUI() {
+
+        beerImage.layer.cornerRadius = 35
+        beerImage.backgroundColor = .systemGray5
+        
+        beerDescription.font = UIFont.systemFont(ofSize: 10, weight: .light)
+    }
+}
+
+extension BeerViewCell {
+    
+    func setupText() {
+            
+    }
 }
