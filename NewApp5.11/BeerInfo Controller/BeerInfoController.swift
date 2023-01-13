@@ -17,7 +17,7 @@ class BeerInfoController: UIViewController {
     
     private var massive = [BeerModel]()
     private var pageNumber = 1
-    private var elementCount = 50
+    private var elementCount = 10
     private var networkEkz = NetworkManager()
     
     // MARK: - Lifecycle
@@ -33,6 +33,7 @@ class BeerInfoController: UIViewController {
     }
     
     // MARK: - Actions
+    
     
     @objc func loadBeers() {
         networkEkz.getResult(page: pageNumber, perPage: elementCount) { networkInfo in
@@ -64,7 +65,43 @@ extension BeerInfoController: UITableViewDataSource{
     }
 }
 
+private func createSpinnerFooter() -> UIView {
+    
+    let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+     
+    let spinner = UIActivityIndicatorView()
+    spinner.center = footerView.center
+    footerView.addSubview(spinner)
+    spinner.startAnimating()
+    return footerView
+}
+                            
 extension BeerInfoController: UITableViewDelegate {
+        
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
+            print("more")
+        }
+        self.tableView.tableFooterView = createSpinnerFooter()
+    }
+    
+
+//
+//    func moreData() {
+//        for _ in 0...9 {
+//            massive.append(massive.last!)
+//        }
+//        tableView.reloadData()
+//    }
+//
+//
+//
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        if indexPath.row == massive.count - 10 {
+//            moreData()
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

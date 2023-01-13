@@ -23,7 +23,8 @@ class BeerDescriptionViewController: UIViewController {
         
         alowVolume()
         
-        self.ingridientsTableView.register(BeerTableViewCell.self, forCellReuseIdentifier: "beerkaID")
+        let nib = UINib(nibName: "BeerkaViewCell", bundle: nil)
+                ingridientsTableView.register(nib, forCellReuseIdentifier: "beerkaID")
         ingridientsTableView.dataSource = self
         ingridientsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         

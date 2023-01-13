@@ -16,22 +16,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="347" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oON-Jb-jaQ">
-                        <rect key="frame" x="152" y="41" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oON-Jb-jaQ">
+                        <rect key="frame" x="285" y="41" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmH-T5-qaO">
+                        <rect key="frame" x="20" y="41" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="WmH-T5-qaO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Jm-fX-22D"/>
+                    <constraint firstItem="WmH-T5-qaO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="5Zv-Ty-Pvr"/>
                     <constraint firstItem="oON-Jb-jaQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="JDv-b5-UpS"/>
+                    <constraint firstAttribute="bottom" secondItem="WmH-T5-qaO" secondAttribute="bottom" constant="41" id="PEg-Ut-DdX"/>
+                    <constraint firstItem="WmH-T5-qaO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="Pqq-5X-qql"/>
                     <constraint firstItem="oON-Jb-jaQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aEm-33-7NH"/>
+                    <constraint firstAttribute="trailing" secondItem="oON-Jb-jaQ" secondAttribute="trailing" constant="20" symbolic="YES" id="jCG-hA-O8x"/>
                     <constraint firstAttribute="bottom" secondItem="oON-Jb-jaQ" secondAttribute="bottom" constant="41" id="qHm-il-OdJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="nameBeerLabel" destination="oON-Jb-jaQ" id="iwB-iS-qoZ"/>
+                <outlet property="nameBeerLabel" destination="oON-Jb-jaQ" id="dXO-Tx-FYg"/>
+                <outlet property="volumeBeerLabel" destination="WmH-T5-qaO" id="K3g-ca-mGs"/>
             </connections>
             <point key="canvasLocation" x="112.31884057971016" y="99.441964285714278"/>
         </tableViewCell>

@@ -12,7 +12,7 @@ class BeerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var volumeBeerLabel: UILabel!
     
-//    @IBOutlet weak var nameBeerLabel: UILabel!
+    @IBOutlet weak var nameBeerLabel: UILabel!
 
     
     var model: Malt?
@@ -25,9 +25,9 @@ class BeerTableViewCell: UITableViewCell {
     
     self.model = model
         var beerValue = model?.amount.value ?? 0.0
-//        var beerName = model?.name ?? ""
+        var beerName = model?.name ?? ""
         
-//        nameBeerLabel.text = String(model?.amount.value ?? 0.0)
+        nameBeerLabel.text = String(model?.amount.value ?? 0.0)
         volumeBeerLabel.text = model?.name ?? ""
     
 }
