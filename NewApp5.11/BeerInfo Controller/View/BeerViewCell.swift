@@ -9,7 +9,9 @@ import UIKit
 import Kingfisher 
 
 class BeerViewCell: UITableViewCell {
-
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var beerVolume: UILabel!
     @IBOutlet weak var beerImage: UIImageView!
     @IBOutlet weak var beerName: UILabel!
@@ -17,6 +19,7 @@ class BeerViewCell: UITableViewCell {
     
     var model: BeerModel?
     
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -47,6 +50,7 @@ class BeerViewCell: UITableViewCell {
     }
 
 }
+// MARK: - Extentions
 
 extension BeerViewCell {
     

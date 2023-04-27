@@ -10,6 +10,8 @@ import Kingfisher
 
 class BeerDescriptionViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var ingridientsTableView: UITableView!
     @IBOutlet weak var beerImage: UIImageView!
     @IBOutlet weak var beerNameLabel: UILabel!
@@ -17,6 +19,8 @@ class BeerDescriptionViewController: UIViewController {
     var imageForBeer: String?
     var nameOfBeer: String?
     var massive = [Malt]()
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,10 @@ class BeerDescriptionViewController: UIViewController {
     }
 }
 
+// MARK: - Extentions
+
 extension BeerDescriptionViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         massive.count
     }
@@ -41,10 +48,6 @@ extension BeerDescriptionViewController: UITableViewDataSource {
 
         let model = massive[indexPath.row]
         cell.configure(withModel: model)
-
-//        cell.textLabel?.text = self.massive[indexPath.row].name
-//        cell.detailTextLabel?.text = String(self.massive[indexPath.row].amount.value ?? 0.0)
-
 
                 return cell
     }

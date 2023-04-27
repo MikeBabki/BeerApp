@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkManager {
     
-    func getResult(page: Int, perPage: Int,completion: @escaping(Result<[BeerModel], Error>) -> Void) {
+    func getResult(page: Int, perPage: Int,completion: @escaping(Result<[BeerModel]?, Error>) -> Void) {
     
         var urlString = URLManager.beerURLCreator(page: page, perPage: perPage)
         var url = URL(string: urlString)

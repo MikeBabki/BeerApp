@@ -10,6 +10,7 @@
 		DD28EC4F296C877E00E2777A /* BeerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD28EC4E296C877E00E2777A /* BeerCell.xib */; };
 		DD28EC52296C889F00E2777A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DD28EC51296C889F00E2777A /* Kingfisher */; };
 		DD28EC54296C8B0500E2777A /* BeerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EC53296C8B0500E2777A /* BeerViewCell.swift */; };
+		DD4B60562975D12C00BC3FB0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DD4B60552975D12C00BC3FB0 /* SDWebImage */; };
 		DD51CD6A295CB8A800824B22 /* BeerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51CD69295CB8A800824B22 /* BeerModel.swift */; };
 		DD51CD6C295CB8B300824B22 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD51CD6B295CB8B300824B22 /* NetworkManager.swift */; };
 		DD665293295CBC4700BD8F4C /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD665292295CBC4700BD8F4C /* Networker.swift */; };
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD4B60562975D12C00BC3FB0 /* SDWebImage in Frameworks */,
 				DD28EC52296C889F00E2777A /* Kingfisher in Frameworks */,
 				DDA1CC172953836000972EF7 /* InputMask in Frameworks */,
 			);
@@ -312,6 +314,7 @@
 			packageProductDependencies = (
 				DDA1CC162953836000972EF7 /* InputMask */,
 				DD28EC51296C889F00E2777A /* Kingfisher */,
+				DD4B60552975D12C00BC3FB0 /* SDWebImage */,
 			);
 			productName = NewApp5.11;
 			productReference = DDE5BE09293E70C50069B5DE /* NewApp5.11.app */;
@@ -344,6 +347,7 @@
 			packageReferences = (
 				DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */,
 				DD28EC50296C889F00E2777A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				DD4B60542975D12C00BC3FB0 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = DDE5BE0A293E70C50069B5DE /* Products */;
 			projectDirPath = "";
@@ -628,6 +632,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		DD4B60542975D12C00BC3FB0 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		DDA1CC152953836000972EF7 /* XCRemoteSwiftPackageReference "input-mask-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RedMadRobot/input-mask-ios.git";
@@ -643,6 +655,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD28EC50296C889F00E2777A /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		DD4B60552975D12C00BC3FB0 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD4B60542975D12C00BC3FB0 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		DDA1CC162953836000972EF7 /* InputMask */ = {
 			isa = XCSwiftPackageProductDependency;

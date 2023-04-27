@@ -20,35 +20,57 @@ class BeerInfoController: UIViewController {
     private var elementCount = 10
     private var networkEkz = NetworkManager()
     
+    let networkDataFetcher = NetworkManager()
+    var searchResponse = [BeerModel]()
+
+    let refreshControl: UIRefreshControl = {
+      let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(loadBeers), for: .valueChanged)
+        return refreshControl
+        
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadBeers()
+        
         tableView.dataSource = self
         tableView.delegate = self
-        self.title = "Beer Collection"
+        
         let nib = UINib(nibName: "BeerCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "beerCelId")
+
+        self.tableView.refreshControl = self.refreshControl
+
     }
-    
-    // MARK: - Actions
-    
+ 
+    // MARK: - Actions (refreshing)
     
     @objc func loadBeers() {
-        networkEkz.getResult(page: pageNumber, perPage: elementCount) { networkInfo in
-            switch networkInfo {
+        self.refreshControl.beginRefreshing()
+        networkEkz.getResult(page: pageNumber, perPage: elementCount) { (searchResponse) in
+            switch searchResponse {
+                
             case .success(let data):
                 DispatchQueue.main.async {
-                    self.massive = data
+                    self.refreshControl.endRefreshing()
+                    self.pageNumber += 1
+                    self.elementCount = 5
+                    data?.forEach {
+                        self.massive.append($0)
+                    }
                     self.tableView.reloadData()
                 }
             case .failure(let error):
-                print("Hop")
+                      print("Hop")
             }
         }
     }
+    
 }
+    // MARK: - Extentions
 
 extension BeerInfoController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,43 +87,14 @@ extension BeerInfoController: UITableViewDataSource{
     }
 }
 
-private func createSpinnerFooter() -> UIView {
-    
-    let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
-     
-    let spinner = UIActivityIndicatorView()
-    spinner.center = footerView.center
-    footerView.addSubview(spinner)
-    spinner.startAnimating()
-    return footerView
-}
-                            
 extension BeerInfoController: UITableViewDelegate {
         
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         if position > (tableView.contentSize.height-100-scrollView.frame.size.height) {
-            print("more")
+            
         }
-        self.tableView.tableFooterView = createSpinnerFooter()
     }
-    
-
-//
-//    func moreData() {
-//        for _ in 0...9 {
-//            massive.append(massive.last!)
-//        }
-//        tableView.reloadData()
-//    }
-//
-//
-//
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        if indexPath.row == massive.count - 10 {
-//            moreData()
-//        }
-//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -118,3 +111,8 @@ extension BeerInfoController: UITableViewDelegate {
     }
 
 }
+
+//extension BeerInfoController: UIScrollViewDelegate {
+//
+//
+//    }
